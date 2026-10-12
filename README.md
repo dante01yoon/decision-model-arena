@@ -1,6 +1,8 @@
 # Decision Model Arena
 
-[한국어](README.ko.md) · Video: https://youtu.be/gJgY5NvBcBk · Short: https://youtube.com/shorts/taS6Smj8YxA
+▶️ **Full video:** https://youtu.be/gJgY5NvBcBk · **Short:** https://youtube.com/shorts/taS6Smj8YxA
+
+![Four-player bomb battle, live](docs/bomb-demo.gif)
 
 Four **decision models** — models that answer with probabilities over options instead of writing text — play the same games and answer the same questions:
 
@@ -12,6 +14,26 @@ Four **decision models** — models that answer with probabilities over options 
 | **Laya** (`convaiinnovations/laya`) | open weights | runs locally (Apple Silicon MPS) |
 
 Every side receives the same state and the same named questions (`choice` / `noul` / `score`). Code owns every rule and every number (legal moves, blast lines, escape routes); the model only makes the judgement call each turn.
+
+## What it looks like
+
+All screens below are real runs against the live APIs (UI labels are in Korean).
+
+| Same question to all four | Versus Tetris |
+|---|---|
+| ![Same question, four answers with probabilities and latency](docs/ask.png) | ![Decision-1 vs Jev versus Tetris](docs/tetris-demo.gif) |
+| **Four-player bomb battle** | **Results** |
+| ![Bomb battle mid-game](docs/bomb.png) | ![Recap table](docs/recap.png) |
+
+### Image decisions
+
+The caption sent with every image says *"a delivery box photo"*. The images are a blank gray square, a login page and a game picture. Decisions API answers what is actually in the picture; Decision-1 answers "delivery box" three times.
+
+![Caption trap: Decisions API vs Decision-1](docs/vision-demo.gif)
+
+| Damaged box | Text vs picture Tetris |
+|---|---|
+| ![Intact vs torn box: Decisions API 0% / 100%, Decision-1 6% / 5%](docs/vision-box.png) | ![Same model: text state vs picture-only state](docs/vision-tetris.png) |
 
 ## Results (measured 2026-10-12, called from the US — your numbers will differ)
 

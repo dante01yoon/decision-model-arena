@@ -1,0 +1,1290 @@
+{
+  "measured_at": "2026-10-12T15:36:24.583Z",
+  "models": [
+    "laya",
+    "jev",
+    "openai",
+    "d1"
+  ],
+  "games": [
+    {
+      "seed": 101,
+      "order": [
+        "laya",
+        "jev",
+        "openai",
+        "d1"
+      ],
+      "turns": 93,
+      "winner": "jev",
+      "placings": [
+        {
+          "place": 1,
+          "side": "jev",
+          "alive": true,
+          "diedAt": null,
+          "killedBy": null,
+          "kills": 0,
+          "crates": 5,
+          "items": 1,
+          "p50_ms": 173,
+          "cost_usd": 0.002542,
+          "plans": {
+            "break crates": 43,
+            "escape danger": 12,
+            "wait": 1,
+            "grab a power-up": 37
+          },
+          "error": null
+        },
+        {
+          "place": 2,
+          "side": "openai",
+          "alive": false,
+          "diedAt": 93,
+          "killedBy": "openai",
+          "kills": 1,
+          "crates": 11,
+          "items": 2,
+          "p50_ms": 157,
+          "cost_usd": 0.004962,
+          "plans": {
+            "break crates": 32,
+            "escape danger": 36,
+            "grab a power-up": 20,
+            "hunt an opponent": 5
+          },
+          "error": null
+        },
+        {
+          "place": 3,
+          "side": "d1",
+          "alive": false,
+          "diedAt": 93,
+          "killedBy": "openai",
+          "kills": 0,
+          "crates": 3,
+          "items": 3,
+          "p50_ms": 272,
+          "cost_usd": 0.001236,
+          "plans": {
+            "break crates": 24,
+            "escape danger": 19,
+            "wait": 17,
+            "grab a power-up": 24,
+            "hunt an opponent": 9
+          },
+          "error": null
+        },
+        {
+          "place": 4,
+          "side": "laya",
+          "alive": false,
+          "diedAt": 5,
+          "killedBy": "laya",
+          "kills": 0,
+          "crates": 1,
+          "items": 0,
+          "p50_ms": 69,
+          "cost_usd": 0,
+          "plans": {
+            "break crates": 4,
+            "wait": 1
+          },
+          "error": null
+        }
+      ],
+      "feed": [
+        {
+          "turn": 93,
+          "who": "d1",
+          "by": "openai"
+        },
+        {
+          "turn": 93,
+          "who": "openai",
+          "by": null
+        },
+        {
+          "turn": 5,
+          "who": "laya",
+          "by": null
+        }
+      ]
+    },
+    {
+      "seed": 102,
+      "order": [
+        "jev",
+        "openai",
+        "d1",
+        "laya"
+      ],
+      "turns": 102,
+      "winner": "d1",
+      "placings": [
+        {
+          "place": 1,
+          "side": "d1",
+          "alive": true,
+          "diedAt": null,
+          "killedBy": null,
+          "kills": 0,
+          "crates": 11,
+          "items": 4,
+          "p50_ms": 276,
+          "cost_usd": 0.001345,
+          "plans": {
+            "break crates": 34,
+            "escape danger": 30,
+            "wait": 4,
+            "grab a power-up": 16,
+            "hunt an opponent": 18
+          },
+          "error": null
+        },
+        {
+          "place": 2,
+          "side": "jev",
+          "alive": false,
+          "diedAt": 102,
+          "killedBy": "wall",
+          "kills": 0,
+          "crates": 6,
+          "items": 0,
+          "p50_ms": 168,
+          "cost_usd": 0.002799,
+          "plans": {
+            "break crates": 42,
+            "escape danger": 26,
+            "grab a power-up": 26,
+            "hunt an opponent": 7,
+            "wait": 1
+          },
+          "error": null
+        },
+        {
+          "place": 3,
+          "side": "openai",
+          "alive": false,
+          "diedAt": 102,
+          "killedBy": "wall",
+          "kills": 0,
+          "crates": 11,
+          "items": 5,
+          "p50_ms": 155,
+          "cost_usd": 0.005436,
+          "plans": {
+            "break crates": 25,
+            "escape danger": 41,
+            "grab a power-up": 28,
+            "hunt an opponent": 7,
+            "wait": 1
+          },
+          "error": null
+        },
+        {
+          "place": 4,
+          "side": "laya",
+          "alive": false,
+          "diedAt": 53,
+          "killedBy": "laya",
+          "kills": 0,
+          "crates": 12,
+          "items": 3,
+          "p50_ms": 68,
+          "cost_usd": 0,
+          "plans": {
+            "break crates": 46,
+            "wait": 4,
+            "escape danger": 3
+          },
+          "error": null
+        }
+      ],
+      "feed": [
+        {
+          "turn": 102,
+          "who": "openai",
+          "by": "wall"
+        },
+        {
+          "turn": 102,
+          "who": "jev",
+          "by": "wall"
+        },
+        {
+          "turn": 53,
+          "who": "laya",
+          "by": null
+        }
+      ]
+    },
+    {
+      "seed": 103,
+      "order": [
+        "openai",
+        "d1",
+        "laya",
+        "jev"
+      ],
+      "turns": 96,
+      "winner": "openai",
+      "placings": [
+        {
+          "place": 1,
+          "side": "openai",
+          "alive": false,
+          "diedAt": 96,
+          "killedBy": "openai",
+          "kills": 1,
+          "crates": 12,
+          "items": 2,
+          "p50_ms": 156,
+          "cost_usd": 0.005146,
+          "plans": {
+            "break crates": 27,
+            "escape danger": 41,
+            "grab a power-up": 19,
+            "hunt an opponent": 9
+          },
+          "error": null
+        },
+        {
+          "place": 2,
+          "side": "d1",
+          "alive": false,
+          "diedAt": 96,
+          "killedBy": "wall",
+          "kills": 0,
+          "crates": 9,
+          "items": 0,
+          "p50_ms": 277,
+          "cost_usd": 0.001268,
+          "plans": {
+            "break crates": 43,
+            "escape danger": 21,
+            "wait": 4,
+            "grab a power-up": 25,
+            "hunt an opponent": 3
+          },
+          "error": null
+        },
+        {
+          "place": 3,
+          "side": "jev",
+          "alive": false,
+          "diedAt": 96,
+          "killedBy": "openai",
+          "kills": 0,
+          "crates": 8,
+          "items": 1,
+          "p50_ms": 167,
+          "cost_usd": 0.002649,
+          "plans": {
+            "break crates": 28,
+            "escape danger": 34,
+            "grab a power-up": 20,
+            "hunt an opponent": 13,
+            "wait": 1
+          },
+          "error": null
+        },
+        {
+          "place": 4,
+          "side": "laya",
+          "alive": false,
+          "diedAt": 13,
+          "killedBy": "laya",
+          "kills": 0,
+          "crates": 4,
+          "items": 0,
+          "p50_ms": 69,
+          "cost_usd": 0,
+          "plans": {
+            "break crates": 13
+          },
+          "error": null
+        }
+      ],
+      "feed": [
+        {
+          "turn": 96,
+          "who": "d1",
+          "by": "wall"
+        },
+        {
+          "turn": 96,
+          "who": "jev",
+          "by": "openai"
+        },
+        {
+          "turn": 96,
+          "who": "openai",
+          "by": null
+        },
+        {
+          "turn": 13,
+          "who": "laya",
+          "by": null
+        }
+      ]
+    },
+    {
+      "seed": 104,
+      "order": [
+        "d1",
+        "laya",
+        "jev",
+        "openai"
+      ],
+      "turns": 90,
+      "winner": "openai",
+      "placings": [
+        {
+          "place": 1,
+          "side": "openai",
+          "alive": false,
+          "diedAt": 90,
+          "killedBy": "wall",
+          "kills": 0,
+          "crates": 14,
+          "items": 4,
+          "p50_ms": 156,
+          "cost_usd": 0.004833,
+          "plans": {
+            "break crates": 16,
+            "escape danger": 47,
+            "grab a power-up": 16,
+            "wait": 1,
+            "hunt an opponent": 10
+          },
+          "error": null
+        },
+        {
+          "place": 2,
+          "side": "d1",
+          "alive": false,
+          "diedAt": 90,
+          "killedBy": "wall",
+          "kills": 0,
+          "crates": 6,
+          "items": 0,
+          "p50_ms": 279,
+          "cost_usd": 0.001211,
+          "plans": {
+            "break crates": 17,
+            "escape danger": 37,
+            "wait": 13,
+            "hunt an opponent": 19,
+            "grab a power-up": 4
+          },
+          "error": null
+        },
+        {
+          "place": 3,
+          "side": "jev",
+          "alive": false,
+          "diedAt": 90,
+          "killedBy": "wall",
+          "kills": 0,
+          "crates": 1,
+          "items": 0,
+          "p50_ms": 167,
+          "cost_usd": 0.002469,
+          "plans": {
+            "break crates": 43,
+            "escape danger": 2,
+            "wait": 4,
+            "grab a power-up": 41
+          },
+          "error": null
+        },
+        {
+          "place": 4,
+          "side": "laya",
+          "alive": false,
+          "diedAt": 5,
+          "killedBy": "laya",
+          "kills": 0,
+          "crates": 1,
+          "items": 0,
+          "p50_ms": 69,
+          "cost_usd": 0,
+          "plans": {
+            "break crates": 4,
+            "wait": 1
+          },
+          "error": null
+        }
+      ],
+      "feed": [
+        {
+          "turn": 90,
+          "who": "jev",
+          "by": "wall"
+        },
+        {
+          "turn": 90,
+          "who": "openai",
+          "by": "wall"
+        },
+        {
+          "turn": 90,
+          "who": "d1",
+          "by": "wall"
+        },
+        {
+          "turn": 5,
+          "who": "laya",
+          "by": null
+        }
+      ]
+    },
+    {
+      "seed": 105,
+      "order": [
+        "laya",
+        "jev",
+        "openai",
+        "d1"
+      ],
+      "turns": 102,
+      "winner": "openai",
+      "placings": [
+        {
+          "place": 1,
+          "side": "openai",
+          "alive": false,
+          "diedAt": 102,
+          "killedBy": "openai",
+          "kills": 1,
+          "crates": 10,
+          "items": 2,
+          "p50_ms": 163,
+          "cost_usd": 0.005458,
+          "plans": {
+            "break crates": 16,
+            "escape danger": 45,
+            "wait": 2,
+            "grab a power-up": 8,
+            "hunt an opponent": 31
+          },
+          "error": null
+        },
+        {
+          "place": 2,
+          "side": "jev",
+          "alive": false,
+          "diedAt": 102,
+          "killedBy": "openai",
+          "kills": 0,
+          "crates": 7,
+          "items": 1,
+          "p50_ms": 167,
+          "cost_usd": 0.002835,
+          "plans": {
+            "break crates": 11,
+            "escape danger": 45,
+            "wait": 7,
+            "grab a power-up": 2,
+            "hunt an opponent": 37
+          },
+          "error": null
+        },
+        {
+          "place": 3,
+          "side": "d1",
+          "alive": false,
+          "diedAt": 15,
+          "killedBy": "d1",
+          "kills": 0,
+          "crates": 4,
+          "items": 1,
+          "p50_ms": 263,
+          "cost_usd": 0.000205,
+          "plans": {
+            "break crates": 7,
+            "escape danger": 5,
+            "grab a power-up": 1,
+            "wait": 2
+          },
+          "error": null
+        },
+        {
+          "place": 4,
+          "side": "laya",
+          "alive": false,
+          "diedAt": 12,
+          "killedBy": "laya",
+          "kills": 0,
+          "crates": 3,
+          "items": 1,
+          "p50_ms": 85,
+          "cost_usd": 0,
+          "plans": {
+            "break crates": 12
+          },
+          "error": null
+        }
+      ],
+      "feed": [
+        {
+          "turn": 102,
+          "who": "openai",
+          "by": null
+        },
+        {
+          "turn": 102,
+          "who": "jev",
+          "by": "openai"
+        },
+        {
+          "turn": 15,
+          "who": "d1",
+          "by": null
+        },
+        {
+          "turn": 12,
+          "who": "laya",
+          "by": null
+        }
+      ]
+    },
+    {
+      "seed": 106,
+      "order": [
+        "jev",
+        "openai",
+        "d1",
+        "laya"
+      ],
+      "turns": 96,
+      "winner": "openai",
+      "placings": [
+        {
+          "place": 1,
+          "side": "openai",
+          "alive": true,
+          "diedAt": null,
+          "killedBy": null,
+          "kills": 1,
+          "crates": 18,
+          "items": 7,
+          "p50_ms": 164,
+          "cost_usd": 0.00509,
+          "plans": {
+            "break crates": 26,
+            "escape danger": 35,
+            "grab a power-up": 33,
+            "hunt an opponent": 2
+          },
+          "error": null
+        },
+        {
+          "place": 2,
+          "side": "d1",
+          "alive": false,
+          "diedAt": 96,
+          "killedBy": "openai",
+          "kills": 0,
+          "crates": 13,
+          "items": 2,
+          "p50_ms": 276,
+          "cost_usd": 0.001273,
+          "plans": {
+            "break crates": 13,
+            "escape danger": 28,
+            "wait": 34,
+            "grab a power-up": 13,
+            "hunt an opponent": 8
+          },
+          "error": null
+        },
+        {
+          "place": 3,
+          "side": "jev",
+          "alive": false,
+          "diedAt": 90,
+          "killedBy": "jev",
+          "kills": 0,
+          "crates": 9,
+          "items": 2,
+          "p50_ms": 165,
+          "cost_usd": 0.002469,
+          "plans": {
+            "break crates": 42,
+            "escape danger": 23,
+            "grab a power-up": 21,
+            "hunt an opponent": 3,
+            "wait": 1
+          },
+          "error": null
+        },
+        {
+          "place": 4,
+          "side": "laya",
+          "alive": false,
+          "diedAt": 10,
+          "killedBy": "laya",
+          "kills": 0,
+          "crates": 1,
+          "items": 0,
+          "p50_ms": 79,
+          "cost_usd": 0,
+          "plans": {
+            "break crates": 6,
+            "wait": 4
+          },
+          "error": null
+        }
+      ],
+      "feed": [
+        {
+          "turn": 96,
+          "who": "d1",
+          "by": "openai"
+        },
+        {
+          "turn": 90,
+          "who": "jev",
+          "by": null
+        },
+        {
+          "turn": 10,
+          "who": "laya",
+          "by": null
+        }
+      ]
+    },
+    {
+      "seed": 107,
+      "order": [
+        "openai",
+        "d1",
+        "laya",
+        "jev"
+      ],
+      "turns": 90,
+      "winner": "d1",
+      "placings": [
+        {
+          "place": 1,
+          "side": "d1",
+          "alive": true,
+          "diedAt": null,
+          "killedBy": null,
+          "kills": 0,
+          "crates": 3,
+          "items": 0,
+          "p50_ms": 278,
+          "cost_usd": 0.001177,
+          "plans": {
+            "break crates": 38,
+            "escape danger": 9,
+            "wait": 10,
+            "grab a power-up": 33
+          },
+          "error": null
+        },
+        {
+          "place": 2,
+          "side": "openai",
+          "alive": false,
+          "diedAt": 90,
+          "killedBy": "wall",
+          "kills": 0,
+          "crates": 7,
+          "items": 3,
+          "p50_ms": 160,
+          "cost_usd": 0.004844,
+          "plans": {
+            "break crates": 19,
+            "escape danger": 43,
+            "grab a power-up": 16,
+            "hunt an opponent": 12
+          },
+          "error": null
+        },
+        {
+          "place": 3,
+          "side": "jev",
+          "alive": false,
+          "diedAt": 90,
+          "killedBy": "wall",
+          "kills": 0,
+          "crates": 6,
+          "items": 1,
+          "p50_ms": 177,
+          "cost_usd": 0.002507,
+          "plans": {
+            "break crates": 16,
+            "escape danger": 43,
+            "grab a power-up": 13,
+            "hunt an opponent": 15,
+            "wait": 3
+          },
+          "error": null
+        },
+        {
+          "place": 4,
+          "side": "laya",
+          "alive": false,
+          "diedAt": 5,
+          "killedBy": "laya",
+          "kills": 0,
+          "crates": 1,
+          "items": 0,
+          "p50_ms": 113,
+          "cost_usd": 0,
+          "plans": {
+            "break crates": 4,
+            "wait": 1
+          },
+          "error": null
+        }
+      ],
+      "feed": [
+        {
+          "turn": 90,
+          "who": "jev",
+          "by": "wall"
+        },
+        {
+          "turn": 90,
+          "who": "openai",
+          "by": "wall"
+        },
+        {
+          "turn": 5,
+          "who": "laya",
+          "by": null
+        }
+      ]
+    },
+    {
+      "seed": 108,
+      "order": [
+        "d1",
+        "laya",
+        "jev",
+        "openai"
+      ],
+      "turns": 93,
+      "winner": "jev",
+      "placings": [
+        {
+          "place": 1,
+          "side": "jev",
+          "alive": true,
+          "diedAt": null,
+          "killedBy": null,
+          "kills": 0,
+          "crates": 9,
+          "items": 2,
+          "p50_ms": 171,
+          "cost_usd": 0.002564,
+          "plans": {
+            "break crates": 41,
+            "escape danger": 20,
+            "wait": 3,
+            "grab a power-up": 29
+          },
+          "error": null
+        },
+        {
+          "place": 2,
+          "side": "d1",
+          "alive": false,
+          "diedAt": 93,
+          "killedBy": "wall",
+          "kills": 0,
+          "crates": 0,
+          "items": 0,
+          "p50_ms": 278,
+          "cost_usd": 0.001222,
+          "plans": {
+            "break crates": 38,
+            "wait": 11,
+            "hunt an opponent": 5,
+            "escape danger": 4,
+            "grab a power-up": 35
+          },
+          "error": null
+        },
+        {
+          "place": 3,
+          "side": "laya",
+          "alive": false,
+          "diedAt": 18,
+          "killedBy": "laya",
+          "kills": 0,
+          "crates": 3,
+          "items": 1,
+          "p50_ms": 101,
+          "cost_usd": 0,
+          "plans": {
+            "break crates": 14,
+            "wait": 4
+          },
+          "error": null
+        },
+        {
+          "place": 4,
+          "side": "openai",
+          "alive": false,
+          "diedAt": 15,
+          "killedBy": "openai",
+          "kills": 0,
+          "crates": 3,
+          "items": 0,
+          "p50_ms": 160,
+          "cost_usd": 0.000805,
+          "plans": {
+            "break crates": 7,
+            "escape danger": 8
+          },
+          "error": null
+        }
+      ],
+      "feed": [
+        {
+          "turn": 93,
+          "who": "d1",
+          "by": "wall"
+        },
+        {
+          "turn": 18,
+          "who": "laya",
+          "by": null
+        },
+        {
+          "turn": 15,
+          "who": "openai",
+          "by": null
+        }
+      ]
+    },
+    {
+      "seed": 109,
+      "order": [
+        "laya",
+        "jev",
+        "openai",
+        "d1"
+      ],
+      "turns": 96,
+      "winner": "openai",
+      "placings": [
+        {
+          "place": 1,
+          "side": "openai",
+          "alive": true,
+          "diedAt": null,
+          "killedBy": null,
+          "kills": 0,
+          "crates": 10,
+          "items": 7,
+          "p50_ms": 166,
+          "cost_usd": 0.005086,
+          "plans": {
+            "break crates": 32,
+            "escape danger": 23,
+            "grab a power-up": 35,
+            "wait": 6
+          },
+          "error": null
+        },
+        {
+          "place": 2,
+          "side": "jev",
+          "alive": false,
+          "diedAt": 96,
+          "killedBy": "wall",
+          "kills": 0,
+          "crates": 5,
+          "items": 1,
+          "p50_ms": 170,
+          "cost_usd": 0.00264,
+          "plans": {
+            "break crates": 41,
+            "escape danger": 11,
+            "wait": 7,
+            "grab a power-up": 37
+          },
+          "error": null
+        },
+        {
+          "place": 3,
+          "side": "d1",
+          "alive": false,
+          "diedAt": 93,
+          "killedBy": "wall",
+          "kills": 0,
+          "crates": 7,
+          "items": 2,
+          "p50_ms": 270,
+          "cost_usd": 0.001225,
+          "plans": {
+            "break crates": 41,
+            "escape danger": 13,
+            "grab a power-up": 37,
+            "wait": 2
+          },
+          "error": null
+        },
+        {
+          "place": 4,
+          "side": "laya",
+          "alive": false,
+          "diedAt": 5,
+          "killedBy": "laya",
+          "kills": 0,
+          "crates": 1,
+          "items": 0,
+          "p50_ms": 89,
+          "cost_usd": 0,
+          "plans": {
+            "break crates": 4,
+            "wait": 1
+          },
+          "error": null
+        }
+      ],
+      "feed": [
+        {
+          "turn": 96,
+          "who": "jev",
+          "by": "wall"
+        },
+        {
+          "turn": 93,
+          "who": "d1",
+          "by": "wall"
+        },
+        {
+          "turn": 5,
+          "who": "laya",
+          "by": null
+        }
+      ]
+    },
+    {
+      "seed": 110,
+      "order": [
+        "jev",
+        "openai",
+        "d1",
+        "laya"
+      ],
+      "turns": 78,
+      "winner": "jev",
+      "placings": [
+        {
+          "place": 1,
+          "side": "jev",
+          "alive": true,
+          "diedAt": null,
+          "killedBy": null,
+          "kills": 0,
+          "crates": 3,
+          "items": 0,
+          "p50_ms": 173,
+          "cost_usd": 0.002144,
+          "plans": {
+            "break crates": 38,
+            "escape danger": 8,
+            "grab a power-up": 32
+          },
+          "error": null
+        },
+        {
+          "place": 2,
+          "side": "openai",
+          "alive": false,
+          "diedAt": 78,
+          "killedBy": "openai",
+          "kills": 1,
+          "crates": 7,
+          "items": 3,
+          "p50_ms": 160,
+          "cost_usd": 0.004197,
+          "plans": {
+            "break crates": 14,
+            "escape danger": 38,
+            "wait": 4,
+            "grab a power-up": 10,
+            "hunt an opponent": 12
+          },
+          "error": null
+        },
+        {
+          "place": 3,
+          "side": "d1",
+          "alive": false,
+          "diedAt": 55,
+          "killedBy": "openai",
+          "kills": 0,
+          "crates": 2,
+          "items": 0,
+          "p50_ms": 272,
+          "cost_usd": 0.000751,
+          "plans": {
+            "break crates": 9,
+            "escape danger": 25,
+            "grab a power-up": 5,
+            "hunt an opponent": 9,
+            "wait": 7
+          },
+          "error": null
+        },
+        {
+          "place": 4,
+          "side": "laya",
+          "alive": false,
+          "diedAt": 5,
+          "killedBy": "laya",
+          "kills": 0,
+          "crates": 1,
+          "items": 0,
+          "p50_ms": 86,
+          "cost_usd": 0,
+          "plans": {
+            "break crates": 4,
+            "wait": 1
+          },
+          "error": null
+        }
+      ],
+      "feed": [
+        {
+          "turn": 78,
+          "who": "openai",
+          "by": null
+        },
+        {
+          "turn": 55,
+          "who": "d1",
+          "by": "openai"
+        },
+        {
+          "turn": 5,
+          "who": "laya",
+          "by": null
+        }
+      ]
+    },
+    {
+      "seed": 111,
+      "order": [
+        "openai",
+        "d1",
+        "laya",
+        "jev"
+      ],
+      "turns": 90,
+      "winner": "d1",
+      "placings": [
+        {
+          "place": 1,
+          "side": "d1",
+          "alive": true,
+          "diedAt": null,
+          "killedBy": null,
+          "kills": 0,
+          "crates": 3,
+          "items": 2,
+          "p50_ms": 274,
+          "cost_usd": 0.001177,
+          "plans": {
+            "break crates": 38,
+            "escape danger": 9,
+            "grab a power-up": 38,
+            "hunt an opponent": 4,
+            "wait": 1
+          },
+          "error": null
+        },
+        {
+          "place": 2,
+          "side": "openai",
+          "alive": false,
+          "diedAt": 90,
+          "killedBy": "wall",
+          "kills": 0,
+          "crates": 5,
+          "items": 1,
+          "p50_ms": 161,
+          "cost_usd": 0.004883,
+          "plans": {
+            "break crates": 14,
+            "escape danger": 50,
+            "grab a power-up": 12,
+            "hunt an opponent": 14
+          },
+          "error": null
+        },
+        {
+          "place": 3,
+          "side": "jev",
+          "alive": false,
+          "diedAt": 90,
+          "killedBy": "wall",
+          "kills": 0,
+          "crates": 8,
+          "items": 5,
+          "p50_ms": 170,
+          "cost_usd": 0.002505,
+          "plans": {
+            "break crates": 11,
+            "escape danger": 45,
+            "wait": 2,
+            "grab a power-up": 13,
+            "hunt an opponent": 19
+          },
+          "error": null
+        },
+        {
+          "place": 4,
+          "side": "laya",
+          "alive": false,
+          "diedAt": 43,
+          "killedBy": "laya",
+          "kills": 0,
+          "crates": 12,
+          "items": 1,
+          "p50_ms": 85,
+          "cost_usd": 0,
+          "plans": {
+            "break crates": 36,
+            "wait": 5,
+            "escape danger": 2
+          },
+          "error": null
+        }
+      ],
+      "feed": [
+        {
+          "turn": 90,
+          "who": "jev",
+          "by": "wall"
+        },
+        {
+          "turn": 90,
+          "who": "openai",
+          "by": "wall"
+        },
+        {
+          "turn": 43,
+          "who": "laya",
+          "by": null
+        }
+      ]
+    },
+    {
+      "seed": 112,
+      "order": [
+        "d1",
+        "laya",
+        "jev",
+        "openai"
+      ],
+      "turns": 90,
+      "winner": "jev",
+      "placings": [
+        {
+          "place": 1,
+          "side": "jev",
+          "alive": true,
+          "diedAt": null,
+          "killedBy": null,
+          "kills": 0,
+          "crates": 15,
+          "items": 1,
+          "p50_ms": 174,
+          "cost_usd": 0.002496,
+          "plans": {
+            "break crates": 23,
+            "escape danger": 43,
+            "wait": 2,
+            "grab a power-up": 5,
+            "hunt an opponent": 17
+          },
+          "error": null
+        },
+        {
+          "place": 2,
+          "side": "d1",
+          "alive": false,
+          "diedAt": 90,
+          "killedBy": "wall",
+          "kills": 0,
+          "crates": 1,
+          "items": 0,
+          "p50_ms": 284,
+          "cost_usd": 0.001204,
+          "plans": {
+            "break crates": 19,
+            "escape danger": 26,
+            "wait": 4,
+            "grab a power-up": 16,
+            "hunt an opponent": 25
+          },
+          "error": null
+        },
+        {
+          "place": 3,
+          "side": "openai",
+          "alive": false,
+          "diedAt": 42,
+          "killedBy": "openai",
+          "kills": 0,
+          "crates": 5,
+          "items": 2,
+          "p50_ms": 161,
+          "cost_usd": 0.002226,
+          "plans": {
+            "break crates": 16,
+            "escape danger": 9,
+            "grab a power-up": 17
+          },
+          "error": null
+        },
+        {
+          "place": 4,
+          "side": "laya",
+          "alive": false,
+          "diedAt": 5,
+          "killedBy": "laya",
+          "kills": 0,
+          "crates": 1,
+          "items": 0,
+          "p50_ms": 101,
+          "cost_usd": 0,
+          "plans": {
+            "break crates": 4,
+            "wait": 1
+          },
+          "error": null
+        }
+      ],
+      "feed": [
+        {
+          "turn": 90,
+          "who": "d1",
+          "by": "wall"
+        },
+        {
+          "turn": 42,
+          "who": "openai",
+          "by": null
+        },
+        {
+          "turn": 5,
+          "who": "laya",
+          "by": null
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,170 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Decision Arena — 이미지 판단</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/static/pretendard.css">
+<style>
+:root{--bg:#0b0d12;--panel:#12151d;--line:#232837;--ink:#eef1f7;--dim:#8a93a8;--openai:#2fd3b5;--d1:#d9ea5b;--bad:#ff5a5f;--mono:ui-monospace,"SF Mono",Menlo,monospace}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--ink);font-family:Pretendard,sans-serif}
+body{width:1920px;height:1080px;overflow:hidden;display:flex;flex-direction:column}
+.top{display:flex;align-items:baseline;gap:22px;padding:24px 48px 8px}
+.top h1{margin:0;font-size:32px;font-weight:800}.top span{font-size:20px;color:var(--dim)}
+.top .who{margin-left:auto;font-size:22px;font-weight:800;color:var(--openai)}
+.q{margin:6px 48px 0;padding:14px 20px;background:var(--panel);border:1px solid var(--line);border-radius:14px;display:flex;gap:14px;align-items:center;flex-wrap:wrap;min-height:64px}
+.q .lbl{color:var(--dim);font-size:18px}.q b{font-size:22px;font-weight:700}
+.q button{margin-left:auto;background:#eef1f7;color:#0b0d12;border:0;border-radius:10px;padding:10px 26px;font:800 22px Pretendard}
+.q button.busy{opacity:.5}
+main{flex:1;display:grid;gap:22px;padding:18px 48px 0;min-height:0}
+.item{background:var(--panel);border:2px solid var(--line);border-radius:18px;padding:16px;display:flex;flex-direction:column;gap:12px;min-height:0}
+.item .pic{flex:1;min-height:0;display:flex;align-items:center;justify-content:center;background:#07090d;border-radius:12px;overflow:hidden}
+.item .pic img{max-width:100%;max-height:100%;object-fit:contain}
+.res{min-height:190px;display:flex;flex-direction:column;gap:8px}
+.res .row{display:grid;grid-template-columns:1fr 280px 80px;gap:12px;align-items:center;font-size:20px}
+.res .row i{display:block;height:14px;border-radius:7px;background:#1e2433;overflow:hidden}
+.res .row em{display:block;height:100%;width:0;background:var(--openai);transition:width .6s}
+.res .row b{font:700 20px var(--mono);text-align:right}
+.res .big{font-size:28px;font-weight:800;color:var(--openai)}
+.res .meta{font:16px var(--mono);color:var(--dim)}
+.item.hot{border-color:var(--bad)}.item.hot .big{color:var(--bad)}
+.d1{font-size:18px;margin-left:18px;color:var(--dim);background:#151925;border:1px solid var(--line);border-radius:10px;padding:8px 14px;display:none}
+.d1 b{color:var(--d1)}
+.dres{font-size:19px;color:var(--dim);border-top:1px solid var(--line);padding-top:8px}.dres b{color:var(--d1)}.dres span{font-family:var(--mono);font-size:16px}
+.safe{height:120px;flex:none}
+body.v{width:1080px;height:1920px}
+body.v .top{flex-wrap:wrap;padding:150px 48px 10px;gap:8px 18px}
+body.v .q button.busy{opacity:1;background:#ffd166;transform:scale(.94);transition:transform .15s}
+body.v .top h1{font-size:46px;width:100%}body.v .top span{font-size:26px}body.v .top .who{margin-left:0;font-size:28px}
+body.v .q{margin:10px 40px 0;padding:18px 22px}body.v .q b{font-size:28px}body.v .q button{font-size:28px;padding:12px 28px}
+body.v main{grid-template-columns:1fr !important;grid-auto-rows:minmax(0,1fr);padding:18px 40px 0;gap:16px}
+body.v .item{flex-direction:row;padding:14px;gap:16px}
+body.v .item .pic{flex:0 0 42%}
+body.v .res{flex:1;min-height:0;justify-content:center;gap:10px}
+body.v .res .row{grid-template-columns:1fr;font-size:26px;gap:4px}
+body.v .res .row i{display:none}body.v .res .row b{text-align:left;font-size:44px;color:var(--openai)}
+body.v .item.hot .res .row b{color:var(--bad)}
+body.v .res .big{font-size:44px}body.v .res .meta{display:none}
+body.v .dres{font-size:28px;line-height:1.35}body.v .dres span{display:none}
+body.v .q{flex-direction:row}body.v .q .st{width:100%;font-size:26px;color:#ffd166}
+body.v .dres b{display:block;font-size:26px}body.v .dres span.tok{display:block;font:24px var(--mono);color:#ffb3b3;margin-top:4px}body.v .dres em{display:block;font-style:normal;font-size:44px;font-weight:800;color:var(--d1)}
+body.v .safe{height:430px}
+body.v .prov{position:absolute;top:96px;left:48px;font-size:24px;color:#8a93a8;border:1px solid #2a3040;border-radius:999px;padding:6px 16px}
+</style>
+<body>
+<header class="top"><h1 id="title"></h1><span id="sub"></span><span class="who">Decisions API · OpenAI</span></header>
+<div class="q" id="q"></div>
+<main id="items"></main>
+<footer class="safe"></footer>
+<script type="module">
+import { decide } from '../shared/arena.js';
+const CASES = {
+  box: {
+    title: '택배 사진 파손 검사', sub: '사진 한 장마다 같은 질문',
+    images: ['img/box-ok.png', 'img/box-bad.png'],
+    state: '고객이 받은 택배 상자 사진입니다.',
+    questions: {
+      damaged: { type: 'noul', instructions: '상자에 찌그러짐이나 찢어짐처럼 눈에 보이는 파손이 있나요? 그림자나 얼룩은 무시하세요.', label: '파손 있음' },
+      level: { type: 'score', instructions: '파손이 얼마나 심한가요?', criteria: ['없음', '약간', '심함'], label: '파손 정도 (0 없음 ~ 2 심함)' },
+    },
+  },
+  login: {
+    title: '로그인 화면 피싱 판별', sub: '가상의 은행 화면 두 장',
+    images: ['img/login-real.png', 'img/login-fake.png'],
+    state: '은행 로그인 화면을 찍은 스크린샷입니다.',
+    questions: {
+      phishing: { type: 'noul', instructions: '이 화면은 피싱일 가능성이 높나요?', label: '피싱 확률' },
+      why: { type: 'choice', instructions: '가장 수상한 부분은 무엇인가요?', criteria: { '주소': '주소창의 도메인이 공식 은행 주소가 아니다', '긴급 경고': '계정 정지 같은 협박성 문구로 서두르게 한다', '과한 정보 요구': '보안카드 전체 번호처럼 은행이 묻지 않는 정보를 요구한다', '수상한 점 없음': '이상한 점이 보이지 않는다' }, label: '가장 수상한 부분' },
+    },
+  },
+  trick: {
+    title: '설명은 "택배 상자", 사진은 다른 것', sub: '글에 끌려가는지, 사진을 보는지',
+    images: ['img/gray.png', 'img/login-fake.png', 'img/thumb-a.png'],
+    state: '고객이 받은 택배 상자 사진입니다.',
+    questions: {
+      what: { type: 'choice', instructions: '사진에 실제로 보이는 것은 무엇인가요?', criteria: { '택배 상자': '배송된 종이 상자', '로그인 화면': '웹사이트 로그인 화면', '게임 그림': '캐릭터가 있는 게임 그림', '빈 화면': '아무것도 없는 단색 화면' }, label: '사진에 보이는 것' },
+    },
+  },
+  bombshot: {
+    title: '게임 화면만 보고 위험 판단', sub: '폭탄 대전 캡처 두 장',
+    images: ['img/bomb-safe.png', 'img/bomb-danger.png'],
+    state: '폭탄 대전 게임 화면입니다. 폭탄은 십자 모양으로 두 칸까지 터지고, 폭탄 위 숫자는 터지기까지 남은 턴입니다.',
+    questions: {
+      green: { type: 'noul', instructions: '초록색 캐릭터가 지금 자리에 있으면 곧 폭발에 휘말리나요?', label: '초록 캐릭터 위험' },
+      who: { type: 'choice', instructions: '지금 가장 위험한 캐릭터는 누구인가요?', criteria: { '초록': '초록색 캐릭터', '분홍': '분홍색 캐릭터', '청록': '청록색 캐릭터', '노랑': '노란색 캐릭터', '없음': '아무도 위험하지 않다' }, label: '가장 위험한 캐릭터' },
+    },
+  },
+  thumb: {
+    title: '썸네일 두 장, 어느 쪽이 눈에 띌까', sub: '이 영상의 썸네일 시안',
+    images: ['img/thumb-a.png', 'img/thumb-b.png'],
+    state: '유튜브 영상 썸네일 시안입니다. 주제는 AI 모델 네 개를 게임으로 대결시키는 영상입니다.',
+    questions: {
+      hook: { type: 'score', instructions: '휴대폰 화면에서 스크롤하다가 눈길이 멈출 만한 썸네일인가요?', criteria: ['그냥 지나침', '조금 눈에 띔', '보통', '눈에 띔', '바로 눌러 보고 싶음'], label: '눈길 점수 (0 ~ 4)' },
+      topic: { type: 'noul', instructions: '썸네일만 보고 AI끼리 게임으로 대결하는 영상이라는 걸 알 수 있나요?', label: '주제가 바로 보임' },
+    },
+  },
+};
+const qs = new URLSearchParams(location.search);
+const c = CASES[qs.get('case') || 'box'];
+const V = !!qs.get('v'); if (V) { document.body.classList.add('v'); const pv = document.createElement('div'); pv.className = 'prov'; pv.textContent = '단테 Mac · 2026-10-12 실제 실행'; document.body.append(pv); }
+const $ = s => document.querySelector(s);
+$('#title').textContent = c.title; $('#sub').textContent = c.sub;
+$('#q').innerHTML = (V ? `<div class="st">함께 보낸 설명: “${c.state}”</div>` : '') + `<span class="lbl">질문</span>` + Object.values(c.questions).map(q => `<b>${q.instructions.split('?')[0]}?</b>`).join('<span class="lbl">·</span>') + `<button id="go">판단하기</button>`;
+$('#items').style.gridTemplateColumns = `repeat(${c.images.length}, 1fr)`;
+$('#items').innerHTML = c.images.map((src, i) => `<div class="item" id="it${i}"><div class="pic"><img src="${src}"></div><div class="res"></div></div>`).join('');
+const d1 = document.createElement('div'); d1.className = 'd1'; document.querySelector('.top').append(d1);
+
+// a small copy, so a failure cannot be blamed on the file size
+async function smallURL(src, w = 256) {
+  const img = new Image(); img.src = src; await img.decode();
+  const cv = document.createElement('canvas'); cv.width = w; cv.height = Math.round(img.height * w / img.width);
+  cv.getContext('2d').drawImage(img, 0, 0, cv.width, cv.height);
+  return cv.toDataURL('image/jpeg', 0.8);
+}
+async function dataURL(src) {
+  const b = await (await fetch(src)).blob();
+  return await new Promise(r => { const f = new FileReader(); f.onload = () => r(f.result); f.readAsDataURL(b); });
+}
+const Q = Object.fromEntries(Object.entries(c.questions).map(([k, q]) => [k, { type: q.type, instructions: q.instructions, ...(q.criteria ? { criteria: q.criteria } : {}) }]));
+async function run() {
+  $('#go').classList.add('busy');
+  const out = { openai: [], d1: null };
+  await Promise.all(c.images.map(async (src, i) => {
+    const el = $(`#it${i} .res`); el.innerHTML = '<div class="meta">보는 중…</div>';
+    const r = await decide('openai-vision', c.state, Q, 'vision:' + src, [await dataURL(src)]);
+    out.openai[i] = { src, answers: r.answers, latency_ms: r.latency_ms, usage: r.usage, cost_usd: r.cost_usd };
+    let html = '', hot = false;
+    for (const [k, q] of Object.entries(c.questions)) {
+      const a = r.answers[k];
+      if (a.type === 'noul') { if (a.noul > 0.5 && k !== 'topic') hot = true;
+        html += `<div class="row"><span>${V ? 'OpenAI · ' + q.label : q.label}</span><i><em style="width:${a.noul * 100}%"></em></i><b>${Math.round(a.noul * 100)}%</b></div>`; }
+      else if (a.type === 'score') { const max = q.criteria.length - 1;
+        html += `<div class="row"><span>${q.label}</span><i><em style="width:${a.score / max * 100}%"></em></i><b>${a.score.toFixed(1)}</b></div>`; }
+      else if (a.type === 'choice') html += `<div class="row"><span>${V ? 'OpenAI' : q.label}</span><span class="big" style="grid-column:2/4">${a.choice}</span></div>`;
+      else html += `<div class="row"><span>${q.label}</span><b>답 거부</b></div>`;
+    }
+    html += `<div class="meta">${Math.round(r.latency_ms)}ms · 입력 ${r.usage?.input_tokens ?? '—'}토큰 · $${(r.cost_usd ?? 0).toFixed(6)}</div>`;
+    el.innerHTML = html; $(`#it${i}`).classList.toggle('hot', hot);
+    // the same picture (shrunk) to Decision-1
+    const dEl = document.createElement('div'); dEl.className = 'dres'; el.append(dEl);
+    try {
+      const d = await decide('d1-vision', c.state, Q, 'vision-d1:' + src, [await smallURL(src)]);
+      out.d1s = out.d1s || []; out.d1s[i] = { src, answers: d.answers, latency_ms: d.latency_ms, usage: d.usage };
+      const first = Object.entries(c.questions)[0], a = d.answers[first[0]];
+      const v = a.type === 'noul' ? `${Math.round(a.noul * 100)}%` : a.type === 'score' ? a.score.toFixed(1) : a.choice;
+      dEl.innerHTML = V ? `<b>MS Decision-1${a.type === 'noul' ? ' · ' + first[1].label : ''}</b><em>${v}</em><span class="tok">사진 1장 입력 ${(d.usage?.input_tokens ?? 0).toLocaleString()}토큰</span>` : `<b>Decision-1</b> 같은 사진 → ${first[1].label} ${v} <span>· 입력 ${d.usage?.input_tokens ?? '—'}토큰</span>`;
+    } catch (e) { dEl.innerHTML = V ? `<b>MS Decision-1</b><em>오류</em>` : `<b>Decision-1</b> 같은 사진 → 오류 ${/HTTP (\d+)/.exec(e.message)?.[1] ?? ''}`; }
+  }));
+
+  $('#go').classList.remove('busy');
+  window.lastVision = out;
+}
+$('#go').onclick = run;
+window.ready = true;
+</script>
+<style>
+body.v .top h1{font-size:52px}
+body.v .res .row{font-size:34px}
+body.v .res .row b, body.v .res .big{font-size:66px}
+body.v .dres b{font-size:34px}body.v .dres em{font-size:66px}body.v .dres span.tok{font-size:32px}
+body.v .prov{font-size:30px}
+body.v .item .pic{flex:0 0 36%}
+</style>

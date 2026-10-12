@@ -1,0 +1,29 @@
+:root{--bg:#0b0d12;--panel:#12151d;--line:#232837;--ink:#eef1f7;--dim:#8a93a8;
+  --laya:#3ddc84;--jev:#ff6fa3;--openai:#2fd3b5;--d1:#d9ea5b;--mono:ui-monospace,"SF Mono",Menlo,monospace}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--ink);font-family:Pretendard,"Apple SD Gothic Neo",sans-serif}
+body{width:1920px;height:1080px;display:flex;flex-direction:column;overflow:hidden}
+.top{padding:26px 56px 10px;display:flex;align-items:baseline;gap:22px}
+.title{font-size:34px;font-weight:800}.sub{font-size:20px;color:var(--dim)}
+main{flex:1;display:grid;grid-template-columns:640px 1fr;gap:32px;padding:10px 56px;min-height:0}
+.input{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:22px 26px;display:flex;flex-direction:column;gap:8px}
+.input label{color:var(--dim);font-size:18px;margin-top:8px}
+textarea,input{background:#0e1118;color:var(--ink);border:1px solid var(--line);border-radius:10px;padding:12px 14px;font:24px/1.4 Pretendard,sans-serif;resize:none;width:100%}
+.choices{display:flex;flex-wrap:wrap;gap:8px}
+.choices span{background:#1a1f2c;border-radius:8px;padding:8px 14px;font-size:21px}
+button{margin-top:auto;background:#eef1f7;color:#0b0d12;border:0;border-radius:12px;padding:18px;font:800 26px Pretendard,sans-serif;cursor:pointer}
+button.busy{opacity:.5}
+.cards{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:20px;min-height:0}
+.card{background:var(--panel);border:2px solid var(--line);border-radius:18px;padding:20px 24px;display:flex;flex-direction:column;gap:10px;min-height:0}
+.card .h{display:flex;align-items:baseline;gap:12px}
+.card .n{font-size:30px;font-weight:800;color:var(--c)}.card .w{font-size:18px;color:var(--dim)}
+.card .ms{margin-left:auto;font:700 30px var(--mono);color:var(--ink)}
+.card .ans{font-size:34px;font-weight:800}
+.bars{display:flex;flex-direction:column;gap:6px}
+.bar{display:grid;grid-template-columns:110px 1fr 70px;align-items:center;gap:10px;font-size:19px}
+.bar i{display:block;height:14px;border-radius:7px;background:#1e2433;overflow:hidden}
+.bar em{display:block;height:100%;background:var(--c);width:0;transition:width .5s}
+.bar b{font:600 18px var(--mono);text-align:right;color:var(--dim)}
+.card .meta{margin-top:auto;font:17px var(--mono);color:var(--dim)}
+.card.wait .ans{color:var(--dim)}
+.safe{height:120px;flex:none}

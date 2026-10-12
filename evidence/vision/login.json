@@ -1,0 +1,131 @@
+{
+  "at": "2026-10-12T16:33:02.106Z",
+  "url": "http://localhost:8750/vision/?case=login",
+  "result": {
+    "openai": [
+      {
+        "src": "img/login-real.png",
+        "answers": {
+          "phishing": {
+            "type": "noul",
+            "noul": 0.19
+          },
+          "why": {
+            "type": "choice",
+            "choice": "주소",
+            "confidence": 0.35,
+            "probabilities": {
+              "주소": 0.51,
+              "긴급 경고": 0.02,
+              "과한 정보 요구": 0.03,
+              "수상한 점 없음": 0.44
+            }
+          }
+        },
+        "latency_ms": 220.7,
+        "usage": {
+          "input_tokens": 1354,
+          "input_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0
+          },
+          "output_tokens": 0,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 1354
+        },
+        "cost_usd": 0.0001354
+      },
+      {
+        "src": "img/login-fake.png",
+        "answers": {
+          "phishing": {
+            "type": "noul",
+            "noul": 0.99
+          },
+          "why": {
+            "type": "choice",
+            "choice": "주소",
+            "confidence": 0.76,
+            "probabilities": {
+              "주소": 0.82,
+              "긴급 경고": 0.01,
+              "과한 정보 요구": 0.17,
+              "수상한 점 없음": 0
+            }
+          }
+        },
+        "latency_ms": 234.4,
+        "usage": {
+          "input_tokens": 1354,
+          "input_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0
+          },
+          "output_tokens": 0,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 1354
+        },
+        "cost_usd": 0.0001354
+      }
+    ],
+    "d1": null,
+    "d1s": [
+      {
+        "src": "img/login-real.png",
+        "answers": {
+          "phishing": {
+            "type": "noul",
+            "noul": 0.5621786665947528
+          },
+          "why": {
+            "type": "choice",
+            "choice": "수상한 점 없음",
+            "probabilities": {
+              "과한 정보 요구": 0.1046237753790525,
+              "긴급 경고": 0.029975213511721596,
+              "수상한 점 없음": 0.7730708534005055,
+              "주소": 0.09233015770872029
+            },
+            "confidence": 0.6974278045340073
+          }
+        },
+        "latency_ms": 282.8,
+        "usage": {
+          "input_tokens": 2913,
+          "output_tokens": 2,
+          "cost": 0.000122346
+        }
+      },
+      {
+        "src": "img/login-fake.png",
+        "answers": {
+          "phishing": {
+            "type": "noul",
+            "noul": 0.5312111867753244
+          },
+          "why": {
+            "type": "choice",
+            "choice": "수상한 점 없음",
+            "probabilities": {
+              "과한 정보 요구": 0.15489216059936325,
+              "긴급 경고": 0.05698164827587246,
+              "수상한 점 없음": 0.6126103789494174,
+              "주소": 0.1755158121753469
+            },
+            "confidence": 0.48348050526588987
+          }
+        },
+        "latency_ms": 612.1,
+        "usage": {
+          "input_tokens": 3993,
+          "output_tokens": 2,
+          "cost": 0.000167706
+        }
+      }
+    ]
+  }
+}

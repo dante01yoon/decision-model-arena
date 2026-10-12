@@ -1,0 +1,14 @@
+seed 101 turns 93 winner jev  1.jev(k0,c5,d-) 2.openai(k1,c11,d93<openai) 3.d1(k0,c3,d93<openai) 4.laya(k0,c1,d5<laya)
+seed 102 turns 102 winner d1  1.d1(k0,c11,d-) 2.jev(k0,c6,d102<wall) 3.openai(k0,c11,d102<wall) 4.laya(k0,c12,d53<laya)
+seed 103 turns 96 winner openai  1.openai(k1,c12,d96<openai) 2.d1(k0,c9,d96<wall) 3.jev(k0,c8,d96<openai) 4.laya(k0,c4,d13<laya)
+seed 104 turns 90 winner openai  1.openai(k0,c14,d90<wall) 2.d1(k0,c6,d90<wall) 3.jev(k0,c1,d90<wall) 4.laya(k0,c1,d5<laya)
+seed 105 turns 102 winner openai  1.openai(k1,c10,d102<openai) 2.jev(k0,c7,d102<openai) 3.d1(k0,c4,d15<d1) 4.laya(k0,c3,d12<laya)
+seed 106 turns 96 winner openai  1.openai(k1,c18,d-) 2.d1(k0,c13,d96<openai) 3.jev(k0,c9,d90<jev) 4.laya(k0,c1,d10<laya)
+seed 107 turns 90 winner d1  1.d1(k0,c3,d-) 2.openai(k0,c7,d90<wall) 3.jev(k0,c6,d90<wall) 4.laya(k0,c1,d5<laya)
+seed 108 turns 93 winner jev  1.jev(k0,c9,d-) 2.d1(k0,c0,d93<wall) 3.laya(k0,c3,d18<laya) 4.openai(k0,c3,d15<openai)
+seed 109 turns 96 winner openai  1.openai(k0,c10,d-) 2.jev(k0,c5,d96<wall) 3.d1(k0,c7,d93<wall) 4.laya(k0,c1,d5<laya)
+seed 110 turns 78 winner jev  1.jev(k0,c3,d-) 2.openai(k1,c7,d78<openai) 3.d1(k0,c2,d55<openai) 4.laya(k0,c1,d5<laya)
+seed 111 turns 90 winner d1  1.d1(k0,c3,d-) 2.openai(k0,c5,d90<wall) 3.jev(k0,c8,d90<wall) 4.laya(k0,c12,d43<laya)
+seed 112 turns 90 winner jev  1.jev(k0,c15,d-) 2.d1(k0,c1,d90<wall) 3.openai(k0,c5,d42<openai) 4.laya(k0,c1,d5<laya)
+
+wins {"laya":0,"jev":4,"openai":5,"d1":3,"draw":0}

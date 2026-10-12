@@ -1,0 +1,189 @@
+{
+  "at": "2026-10-12T16:33:15.343Z",
+  "url": "http://localhost:8750/vision/?case=thumb",
+  "result": {
+    "openai": [
+      {
+        "src": "img/thumb-a.png",
+        "answers": {
+          "hook": {
+            "type": "score",
+            "score": 3.03,
+            "confidence": 0.93,
+            "probabilities": [
+              {
+                "value": 0,
+                "label": "그냥 지나침",
+                "probability": 0
+              },
+              {
+                "value": 1,
+                "label": "조금 눈에 띔",
+                "probability": 0.01
+              },
+              {
+                "value": 2,
+                "label": "보통",
+                "probability": 0.01
+              },
+              {
+                "value": 3,
+                "label": "눈에 띔",
+                "probability": 0.92
+              },
+              {
+                "value": 4,
+                "label": "바로 눌러 보고 싶음",
+                "probability": 0.06
+              }
+            ]
+          },
+          "topic": {
+            "type": "noul",
+            "noul": 0.94
+          }
+        },
+        "latency_ms": 702.3,
+        "usage": {
+          "input_tokens": 1270,
+          "input_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0
+          },
+          "output_tokens": 0,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 1270
+        },
+        "cost_usd": 0.00012700000000000002
+      },
+      {
+        "src": "img/thumb-b.png",
+        "answers": {
+          "hook": {
+            "type": "score",
+            "score": 3,
+            "confidence": 0.93,
+            "probabilities": [
+              {
+                "value": 0,
+                "label": "그냥 지나침",
+                "probability": 0
+              },
+              {
+                "value": 1,
+                "label": "조금 눈에 띔",
+                "probability": 0.01
+              },
+              {
+                "value": 2,
+                "label": "보통",
+                "probability": 0.02
+              },
+              {
+                "value": 3,
+                "label": "눈에 띔",
+                "probability": 0.93
+              },
+              {
+                "value": 4,
+                "label": "바로 눌러 보고 싶음",
+                "probability": 0.04
+              }
+            ]
+          },
+          "topic": {
+            "type": "noul",
+            "noul": 0.86
+          }
+        },
+        "latency_ms": 738.6,
+        "usage": {
+          "input_tokens": 1270,
+          "input_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0
+          },
+          "output_tokens": 0,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 1270
+        },
+        "cost_usd": 0.00012700000000000002
+      }
+    ],
+    "d1": null,
+    "d1s": [
+      {
+        "src": "img/thumb-a.png",
+        "answers": {
+          "hook": {
+            "type": "score",
+            "score": 2.4903348863576977,
+            "legend": {
+              "0": "그냥 지나침",
+              "1": "조금 눈에 띔",
+              "2": "보통",
+              "3": "눈에 띔",
+              "4": "바로 눌러 보고 싶음"
+            },
+            "probabilities": {
+              "0": 0.01666125768832667,
+              "1": 0.0658965524576823,
+              "2": 0.3792085223177064,
+              "3": 0.4869133808805357,
+              "4": 0.05132028665574889
+            },
+            "confidence": 0.3586417261006696
+          },
+          "topic": {
+            "type": "noul",
+            "noul": 0.24508717781057948
+          }
+        },
+        "latency_ms": 633,
+        "usage": {
+          "input_tokens": 8574,
+          "output_tokens": 2,
+          "cost": 0.000360108
+        }
+      },
+      {
+        "src": "img/thumb-b.png",
+        "answers": {
+          "hook": {
+            "type": "score",
+            "score": 2.581357142170177,
+            "legend": {
+              "0": "그냥 지나침",
+              "1": "조금 눈에 띔",
+              "2": "보통",
+              "3": "눈에 띔",
+              "4": "바로 눌러 보고 싶음"
+            },
+            "probabilities": {
+              "0": 0.014342801906151052,
+              "1": 0.05672688196047891,
+              "2": 0.3264406667312331,
+              "3": 0.5382096708613158,
+              "4": 0.06427997854082113
+            },
+            "confidence": 0.42276208857664477
+          },
+          "topic": {
+            "type": "noul",
+            "noul": 0.3208236418028833
+          }
+        },
+        "latency_ms": 663.8,
+        "usage": {
+          "input_tokens": 7997,
+          "output_tokens": 2,
+          "cost": 0.000335874
+        }
+      }
+    ]
+  }
+}

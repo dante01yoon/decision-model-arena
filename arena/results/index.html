@@ -1,0 +1,127 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Decision Arena — 결과</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/static/pretendard.css">
+<style>
+:root{--bg:#0b0d12;--panel:#12151d;--line:#232837;--ink:#eef1f7;--dim:#8a93a8;
+  --laya:#3ddc84;--jev:#ff6fa3;--openai:#2fd3b5;--d1:#d9ea5b;--mono:ui-monospace,"SF Mono",Menlo,monospace}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--ink);font-family:Pretendard,sans-serif}
+body{width:1920px;height:1080px;overflow:hidden;display:flex;flex-direction:column}
+.top{padding:44px 120px 10px}.top h1{margin:0;font-size:46px;font-weight:800}.top p{margin:10px 0 0;font-size:24px;color:var(--dim)}
+main{flex:1;padding:30px 120px 0;min-height:0}
+.safe{height:130px;flex:none}
+.row{display:grid;grid-template-columns:330px 1fr 260px;align-items:center;gap:28px;margin:0 0 26px}
+.row .n{font-size:38px;font-weight:800;color:var(--c)}.row .n small{display:block;font-size:19px;color:var(--dim);font-weight:400}
+.row .bar{height:58px;background:#151925;border-radius:12px;overflow:hidden;display:flex}
+.row .bar i{display:block;height:100%;width:0;transition:width 1.2s cubic-bezier(.2,.7,.2,1)}
+.row .bar i.w{background:var(--c)}.row .bar i.d{background:#596075}.row .bar i.l{background:#2a3040}
+.row .v{font:800 40px var(--mono);text-align:right}.row .v small{white-space:nowrap;font-size:20px;color:var(--dim);font-weight:400;display:block}
+.legend{display:flex;gap:28px;font-size:20px;color:var(--dim);margin-top:8px}.legend b{display:inline-block;width:18px;height:18px;border-radius:4px;vertical-align:-2px;margin-right:8px}
+table{border-collapse:separate;border-spacing:10px;margin:0 auto}
+th{font-size:26px;font-weight:800;padding:8px 14px;color:var(--c)}
+th.r{text-align:right}
+td{width:270px;height:120px;border-radius:14px;background:var(--panel);text-align:center;font:800 40px var(--mono);opacity:0;transition:opacity .5s}
+td small{display:block;font:400 18px Pretendard;color:var(--dim);margin-top:4px}
+td.self{background:transparent}
+td.win{box-shadow:inset 0 0 0 3px var(--c)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:70px}
+.two h2{font-size:28px;margin:0 0 24px;color:var(--dim);font-weight:600}
+.two .row{grid-template-columns:230px 1fr 170px;margin-bottom:22px}
+.two .row .n{font-size:30px}.two .row .v{font-size:32px}
+table.recap td{width:250px;height:118px}
+table.recap td.ok{color:var(--openai);font-family:Pretendard}table.recap td.no{color:var(--dim);font-size:34px;font-family:Pretendard}
+table.recap tr:first-child th{color:var(--dim);font-size:24px}
+body.v{width:1080px;height:1920px}
+body.v .top{padding:170px 48px 10px}body.v .top h1{font-size:54px}body.v .top p{font-size:28px}
+body.v main{padding:40px 48px 0}
+body.v .row{grid-template-columns:300px 1fr 150px;gap:20px;margin-bottom:34px}
+body.v .row .n{font-size:40px}body.v .row .bar{height:64px}body.v .row .v{font-size:46px}
+</style>
+<body>
+<header class="top"><h1 id="h"></h1><p id="p"></p></header>
+<main id="m"></main>
+<footer class="safe"></footer>
+<script type="module">
+const M = { laya: ['Laya', '내 맥 · 무료', 'var(--laya)'], jev: ['Jev', 'TypeSafe', 'var(--jev)'],
+  openai: ['Decisions API', 'OpenAI', 'var(--openai)'], d1: ['Decision-1', 'Microsoft', 'var(--d1)'] };
+const view = new URLSearchParams(location.search).get('view') || 'tetris';
+if (new URLSearchParams(location.search).get('v')) document.body.classList.add('v');
+const $ = s => document.querySelector(s);
+const animate = () => requestAnimationFrame(() => setTimeout(() => {
+  document.querySelectorAll('[data-w]').forEach(e => e.style.width = e.dataset.w);
+  document.querySelectorAll('td').forEach((e, i) => setTimeout(() => e.style.opacity = 1, 120 * i));
+  window.ready = true;
+}, 700));
+const row = (k, parts, value, sub = '') => `<div class="row" style="--c:${M[k][2]};${view==='bomb'?'grid-template-columns:330px 1fr 420px':''}"><div class="n">${M[k][0]}<small>${M[k][1]}</small></div>
+  <div class="bar">${parts.map(([cls, w]) => `<i class="${cls}" data-w="${w}%"></i>`).join('')}</div><div class="v">${value}<small>${sub}</small></div></div>`;
+
+if (view === 'tetris' || view === 'h2h') {
+  const d = await (await fetch('data/league.json')).json();
+  const t = Object.fromEntries(d.models.map(m => [m, { w: 0, l: 0, d: 0 }]));
+  const h = {}; for (const a of d.models) { h[a] = {}; for (const b of d.models) h[a][b] = [0, 0, 0]; }
+  for (const r of d.matches) {
+    if (r.winner === 'draw') { t[r.a].d++; t[r.b].d++; h[r.a][r.b][2]++; h[r.b][r.a][2]++; }
+    else if (r.winner !== 'void') { const l = r.winner === r.a ? r.b : r.a; t[r.winner].w++; t[l].l++; h[r.winner][l][0]++; h[l][r.winner][1]++; }
+  }
+  const order = [...d.models].sort((a, b) => t[b].w - t[a].w);
+  if (view === 'tetris') {
+    $('#h').textContent = `테트리스 리그 · ${d.matches.length}경기`;
+    $('#p').textContent = `네 모델이 서로 한 번씩 · 블록 순서 ${d.seeds.length}가지 · 한 모델당 ${d.matches.length / 2}경기`;
+    $('#m').innerHTML = order.map(k => { const n = t[k].w + t[k].l + t[k].d;
+      return row(k, [['w', t[k].w / n * 100], ['d', t[k].d / n * 100], ['l', t[k].l / n * 100]], `${t[k].w}승`, `${t[k].l}패${t[k].d ? ' ' + t[k].d + '무' : ''}`); }).join('') +
+      `<div class="legend"><span><b style="background:#eef1f7"></b>승</span><span><b style="background:#596075"></b>무</span><span><b style="background:#2a3040"></b>패</span></div>`;
+  } else {
+    $('#h').textContent = '상대 전적'; $('#p').textContent = '가로줄 모델 기준 · 승-패(-무)';
+    $('#m').innerHTML = `<table><tr><th></th>${order.map(k => `<th style="--c:${M[k][2]}">${M[k][0]}</th>`).join('')}</tr>` +
+      order.map(a => `<tr><th class="r" style="--c:${M[a][2]}">${M[a][0]}</th>${order.map(b => {
+        if (a === b) return '<td class="self"></td>';
+        const [w, l, dd] = h[a][b];
+        return `<td class="${w > l ? 'win' : ''}" style="--c:${M[a][2]}">${w}-${l}${dd ? '-' + dd : ''}<small>${w > l ? '우세' : w < l ? '열세' : '동률'}</small></td>`;
+      }).join('')}</tr>`).join('') + '</table>';
+  }
+}
+if (view === 'bomb') {
+  const d = await (await fetch('data/bomb-league.json')).json();
+  const s = Object.fromEntries(d.models.map(m => [m, { win: 0, place: 0, alive: 0, kills: 0, self: 0 }]));
+  for (const g of d.games) for (const p of g.placings) {
+    s[p.side].place += p.place; s[p.side].kills += p.kills;
+    if (p.side === g.winner) s[p.side].win++;
+    if (p.killedBy === p.side) s[p.side].self++;
+  }
+  const n = d.games.length;
+  const order = [...d.models].sort((a, b) => s[b].win - s[a].win || s[a].place - s[b].place);
+  $('#h').textContent = `폭탄 대전 · ${n}판`;
+  $('#p').textContent = '넷이 한 판에서 · 시작 자리를 돌려가며 · 막대는 우승 횟수';
+  $('#m').innerHTML = order.map(k => row(k, [['w', s[k].win / n * 100]], `${s[k].win}승`, `평균 ${(s[k].place / n).toFixed(1)}등 · 상대 탈락시킴 ${s[k].kills} · 자폭 ${s[k].self}`)).join('');
+}
+if (view === 'recap') {
+  const t = await (await fetch('data/league.json')).json(), b = await (await fetch('data/bomb-league.json')).json();
+  const tw = Object.fromEntries(t.models.map(m => [m, 0])), bw = Object.fromEntries(b.models.map(m => [m, 0]));
+  for (const r of t.matches) if (tw[r.winner] !== undefined) tw[r.winner]++;
+  for (const g of b.games) if (bw[g.winner] !== undefined) bw[g.winner]++;
+  const sp = await (await fetch('data/speed.json')).json();
+  const ms = Object.fromEntries(sp.models.map(m => [m.side, m])), order = ['d1', 'jev', 'openai', 'laya'];
+  $('#h').textContent = '한눈에 보기'; $('#p').textContent = '테트리스 48경기 · 폭탄 대전 12판 · 사진 판단 · 판단 1만 번 비용';
+  $('#m').innerHTML = `<table class="recap"><tr><th></th><th>테트리스</th><th>폭탄 대전</th><th>사진 판단</th><th>응답 시간</th><th>1만 번 비용</th></tr>` +
+    order.map(k => `<tr><th class="r" style="--c:${M[k][2]}">${M[k][0]}</th><td>${tw[k]}승</td><td>${bw[k]}승</td><td class="${k === 'openai' ? 'ok' : 'no'}">${{ openai: '봄', d1: '못 봄', jev: '글만', laya: '글만' }[k]}</td><td>${Math.round(ms[k].p50_ms)}ms</td><td>${ms[k].usd_per_10k ? '$' + ms[k].usd_per_10k.toFixed(2) : '0원'}</td></tr>`).join('') + '</table>';
+}
+if (view === 'vision') {
+  const d = await (await fetch('data/vision-tetris.json')).json();
+  const w = { 'openai-text': 0, 'openai-vision': 0 }; const ms = { 'openai-text': [], 'openai-vision': [] };
+  for (const g of d.games) { w[g.winner]++; for (const k in ms) ms[k].push(g.sides[k].p50); }
+  const med = a => [...a].sort((x, y) => x - y)[Math.floor(a.length / 2)];
+  const n = d.games.length;
+  M['openai-text'] = ['Decisions API', '글로 읽고 판단', 'var(--openai)']; M['openai-vision'] = ['Decisions API', '그림만 보고 판단', '#8ab4ff'];
+  $('#h').textContent = `테트리스 · 글 vs 그림 · ${n}경기`; $('#p').textContent = '같은 모델, 같은 블록 순서 · 한쪽은 숫자로 된 설명, 한쪽은 보드 그림만';
+  $('#m').innerHTML = ['openai-text', 'openai-vision'].map(k => row(k, [['w', w[k] / n * 100]], `${w[k]}승`, `응답 ${med(ms[k])}ms`)).join('');
+}
+if (view === 'speed') {
+  const d = await (await fetch('data/speed.json')).json();
+  $('#h').textContent = '속도와 비용'; $('#p').textContent = d.note;
+  const maxMs = Math.max(...d.models.map(m => m.p50_ms)), maxC = Math.max(...d.models.map(m => m.usd_per_10k));
+  $('#m').innerHTML = `<div class="two"><div><h2>판단 1번 걸린 시간 (중앙값)</h2>${d.models.map(m => row(m.side, [['w', m.p50_ms / maxMs * 100]], `${Math.round(m.p50_ms)}ms`)).join('')}</div>
+    <div><h2>판단 1만 번 비용</h2>${d.models.map(m => row(m.side, [['w', Math.max(m.usd_per_10k / maxC * 100, 0.6)]], m.usd_per_10k ? `$${m.usd_per_10k.toFixed(2)}` : '0원', m.tokens ? `한 번에 ${m.tokens}토큰` : '내 맥에서 계산')).join('')}</div></div>`;
+}
+animate();
+</script>

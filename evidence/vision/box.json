@@ -1,0 +1,161 @@
+{
+  "at": "2026-10-12T16:32:49.370Z",
+  "url": "http://localhost:8750/vision/?case=box",
+  "result": {
+    "openai": [
+      {
+        "src": "img/box-ok.png",
+        "answers": {
+          "damaged": {
+            "type": "noul",
+            "noul": 0
+          },
+          "level": {
+            "type": "score",
+            "score": 0.02,
+            "confidence": 0.97,
+            "probabilities": [
+              {
+                "value": 0,
+                "label": "없음",
+                "probability": 0.98
+              },
+              {
+                "value": 1,
+                "label": "약간",
+                "probability": 0.02
+              },
+              {
+                "value": 2,
+                "label": "심함",
+                "probability": 0
+              }
+            ]
+          }
+        },
+        "latency_ms": 387.7,
+        "usage": {
+          "input_tokens": 1331,
+          "input_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0
+          },
+          "output_tokens": 0,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 1331
+        },
+        "cost_usd": 0.0001331
+      },
+      {
+        "src": "img/box-bad.png",
+        "answers": {
+          "damaged": {
+            "type": "noul",
+            "noul": 1
+          },
+          "level": {
+            "type": "score",
+            "score": 2,
+            "confidence": 1,
+            "probabilities": [
+              {
+                "value": 0,
+                "label": "없음",
+                "probability": 0
+              },
+              {
+                "value": 1,
+                "label": "약간",
+                "probability": 0
+              },
+              {
+                "value": 2,
+                "label": "심함",
+                "probability": 1
+              }
+            ]
+          }
+        },
+        "latency_ms": 624.9,
+        "usage": {
+          "input_tokens": 1331,
+          "input_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0
+          },
+          "output_tokens": 0,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 1331
+        },
+        "cost_usd": 0.0001331
+      }
+    ],
+    "d1": null,
+    "d1s": [
+      {
+        "src": "img/box-ok.png",
+        "answers": {
+          "damaged": {
+            "type": "noul",
+            "noul": 0.06008697311122668
+          },
+          "level": {
+            "type": "score",
+            "score": 1,
+            "legend": {
+              "0": "없음",
+              "1": "약간",
+              "2": "심함"
+            },
+            "probabilities": {
+              "0": 0.25851509501132297,
+              "1": 0.4829698099773541,
+              "2": 0.25851509501132297
+            },
+            "confidence": 0.2244547149660312
+          }
+        },
+        "latency_ms": 616,
+        "usage": {
+          "input_tokens": 10224,
+          "output_tokens": 2,
+          "cost": 0.000429408
+        }
+      },
+      {
+        "src": "img/box-bad.png",
+        "answers": {
+          "damaged": {
+            "type": "noul",
+            "noul": 0.05340364453269133
+          },
+          "level": {
+            "type": "score",
+            "score": 0.8638776311935952,
+            "legend": {
+              "0": "없음",
+              "1": "약간",
+              "2": "심함"
+            },
+            "probabilities": {
+              "0": 0.3459541948223697,
+              "1": 0.44421397916166544,
+              "2": 0.20983182601596484
+            },
+            "confidence": 0.16632096874249813
+          }
+        },
+        "latency_ms": 687.1,
+        "usage": {
+          "input_tokens": 15406,
+          "output_tokens": 2,
+          "cost": 0.000647052
+        }
+      }
+    ]
+  }
+}

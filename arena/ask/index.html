@@ -1,0 +1,21 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Decision Arena — 같은 질문</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/static/pretendard.css">
+<link rel="stylesheet" href="./ask.css">
+<body>
+<header class="top"><div class="title">같은 질문, 네 모델</div><div class="sub">상황과 질문을 똑같이 보내고 답·확률·응답 시간을 비교합니다</div></header>
+<main>
+  <section class="input">
+    <label>상황</label>
+    <textarea id="state" rows="2"></textarea>
+    <label>질문</label>
+    <input id="question">
+    <label>선택지</label>
+    <div id="choices" class="choices"></div>
+    <button id="go">네 모델에게 묻기</button>
+  </section>
+  <section class="cards" id="cards"></section>
+</main>
+<footer class="safe"></footer>
+<script type="module" src="./ask.js"></script>

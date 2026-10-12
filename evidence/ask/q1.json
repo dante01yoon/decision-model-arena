@@ -1,0 +1,79 @@
+{
+  "at": "2026-10-12T15:38:16.920Z",
+  "url": "http://localhost:8750/ask/?state=%EC%A3%BC%EB%AC%B8%ED%95%9C%20%EA%B2%8C%20%EB%91%90%20%EB%B2%88%20%EA%B2%B0%EC%A0%9C%EB%90%90%EC%96%B4%EC%9A%94.%20%ED%99%98%EB%B6%88%EC%9D%80%20%EC%96%B8%EC%A0%9C%20%EB%90%98%EB%82%98%EC%9A%94%3F&question=%EC%9D%B4%20%EB%AC%B8%EC%9D%98%EB%8A%94%20%EC%96%B4%EB%8A%90%20%ED%8C%80%EC%9D%B4%20%EB%A7%A1%EC%95%84%EC%95%BC%20%ED%95%98%EB%82%98%EC%9A%94%3F&choices=%EA%B2%B0%EC%A0%9C%7C%EB%B0%B0%EC%86%A1%7C%EA%B8%B0%EC%88%A0%20%EB%AC%B8%EC%A0%9C%7C%EA%B8%B0%ED%83%80",
+  "result": {
+    "laya": {
+      "choice": "결제",
+      "probabilities": {
+        "결제": 0.5969,
+        "배송": 0.0516,
+        "기술 문제": 0.1976,
+        "기타": 0.154
+      },
+      "latency_ms": 59.1,
+      "usage": {
+        "input_tokens": 137,
+        "output_tokens": 0,
+        "state_tokens": 44,
+        "state_tokens_dropped": 0,
+        "truncated": false,
+        "truncated_questions": []
+      },
+      "cost_usd": 0
+    },
+    "openai": {
+      "choice": "결제",
+      "probabilities": {
+        "결제": 0.99,
+        "배송": 0,
+        "기술 문제": 0,
+        "기타": 0.01
+      },
+      "latency_ms": 146.2,
+      "usage": {
+        "input_tokens": 151,
+        "input_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0
+        },
+        "output_tokens": 0,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 151
+      },
+      "cost_usd": 0.000015100000000000001
+    },
+    "jev": {
+      "choice": "결제",
+      "probabilities": {
+        "결제": 1,
+        "배송": 0,
+        "기술 문제": 0,
+        "기타": 0
+      },
+      "latency_ms": 198.3,
+      "usage": {
+        "input_tokens": 366,
+        "output_tokens": 50
+      },
+      "cost_usd": 0.000015372
+    },
+    "d1": {
+      "choice": "결제",
+      "probabilities": {
+        "결제": 0.9963303498745395,
+        "기술 문제": 0.00003108838220313847,
+        "기타": 0.003593328414057514,
+        "배송": 0.00004523332919993576
+      },
+      "latency_ms": 1117.5,
+      "usage": {
+        "input_tokens": 64,
+        "output_tokens": 1,
+        "cost": 0.000002688
+      },
+      "cost_usd": 0.000002688
+    }
+  }
+}

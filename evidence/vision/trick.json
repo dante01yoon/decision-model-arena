@@ -1,0 +1,167 @@
+{
+  "at": "2026-10-12T16:33:39.483Z",
+  "url": "http://localhost:8750/vision/?case=trick",
+  "result": {
+    "openai": [
+      {
+        "src": "img/gray.png",
+        "answers": {
+          "what": {
+            "type": "choice",
+            "choice": "빈 화면",
+            "confidence": 0.99,
+            "probabilities": {
+              "택배 상자": 0.01,
+              "로그인 화면": 0,
+              "게임 그림": 0,
+              "빈 화면": 0.99
+            }
+          }
+        },
+        "latency_ms": 210.1,
+        "usage": {
+          "input_tokens": 1192,
+          "input_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0
+          },
+          "output_tokens": 0,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 1192
+        },
+        "cost_usd": 0.00011920000000000001
+      },
+      {
+        "src": "img/login-fake.png",
+        "answers": {
+          "what": {
+            "type": "choice",
+            "choice": "로그인 화면",
+            "confidence": 0.99,
+            "probabilities": {
+              "택배 상자": 0,
+              "로그인 화면": 0.99,
+              "게임 그림": 0.01,
+              "빈 화면": 0
+            }
+          }
+        },
+        "latency_ms": 238.7,
+        "usage": {
+          "input_tokens": 1168,
+          "input_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0
+          },
+          "output_tokens": 0,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 1168
+        },
+        "cost_usd": 0.0001168
+      },
+      {
+        "src": "img/thumb-a.png",
+        "answers": {
+          "what": {
+            "type": "choice",
+            "choice": "게임 그림",
+            "confidence": 0.96,
+            "probabilities": {
+              "택배 상자": 0.01,
+              "로그인 화면": 0.01,
+              "게임 그림": 0.97,
+              "빈 화면": 0.01
+            }
+          }
+        },
+        "latency_ms": 553.5,
+        "usage": {
+          "input_tokens": 1088,
+          "input_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0
+          },
+          "output_tokens": 0,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 1088
+        },
+        "cost_usd": 0.00010880000000000002
+      }
+    ],
+    "d1": null,
+    "d1s": [
+      {
+        "src": "img/gray.png",
+        "answers": {
+          "what": {
+            "type": "choice",
+            "choice": "택배 상자",
+            "probabilities": {
+              "게임 그림": 0.005710964932944412,
+              "로그인 화면": 0.0034638753283744894,
+              "빈 화면": 0.2428364082132124,
+              "택배 상자": 0.7479887515254686
+            },
+            "confidence": 0.6639850020339582
+          }
+        },
+        "latency_ms": 522.2,
+        "usage": {
+          "input_tokens": 657,
+          "output_tokens": 1,
+          "cost": 0.000027594
+        }
+      },
+      {
+        "src": "img/login-fake.png",
+        "answers": {
+          "what": {
+            "type": "choice",
+            "choice": "택배 상자",
+            "probabilities": {
+              "게임 그림": 0.012388653494549462,
+              "로그인 화면": 0.0021528251717889977,
+              "빈 화면": 0.0013057544716911442,
+              "택배 상자": 0.9841527668619704
+            },
+            "confidence": 0.9788703558159605
+          }
+        },
+        "latency_ms": 504.9,
+        "usage": {
+          "input_tokens": 3939,
+          "output_tokens": 1,
+          "cost": 0.000165438
+        }
+      },
+      {
+        "src": "img/thumb-a.png",
+        "answers": {
+          "what": {
+            "type": "choice",
+            "choice": "택배 상자",
+            "probabilities": {
+              "게임 그림": 0.059820186853710905,
+              "로그인 화면": 0.002628314952492134,
+              "빈 화면": 0.001806412688133847,
+              "택배 상자": 0.9357450855056632
+            },
+            "confidence": 0.9143267806742176
+          }
+        },
+        "latency_ms": 318.8,
+        "usage": {
+          "input_tokens": 8523,
+          "output_tokens": 1,
+          "cost": 0.000357966
+        }
+      }
+    ]
+  }
+}

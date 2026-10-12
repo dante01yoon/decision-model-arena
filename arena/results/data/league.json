@@ -1,0 +1,1817 @@
+{
+  "measured_at": "2026-10-12T14:51:37.204Z",
+  "models": [
+    "laya",
+    "jev",
+    "openai",
+    "d1"
+  ],
+  "seeds": [
+    3,
+    7,
+    11,
+    19,
+    23,
+    42,
+    57,
+    88
+  ],
+  "matches": [
+    {
+      "seed": 3,
+      "a": "laya",
+      "b": "jev",
+      "turns": 37,
+      "winner": "jev",
+      "laya": {
+        "lines": 4,
+        "sent": 2,
+        "received": 4,
+        "pieces": 37,
+        "dead": true,
+        "error": null,
+        "p50_ms": 102,
+        "cost_usd": 0,
+        "plans": {
+          "clear lines now": 37
+        }
+      },
+      "jev": {
+        "lines": 12,
+        "sent": 5,
+        "received": 2,
+        "pieces": 37,
+        "dead": false,
+        "error": null,
+        "p50_ms": 164,
+        "cost_usd": 0.001082,
+        "plans": {
+          "stay safe and keep the stack low": 1,
+          "build a bigger attack": 1,
+          "dig out the buried holes": 28,
+          "clear lines now": 7
+        }
+      }
+    },
+    {
+      "seed": 3,
+      "a": "laya",
+      "b": "openai",
+      "turns": 40,
+      "winner": "openai",
+      "laya": {
+        "lines": 5,
+        "sent": 2,
+        "received": 5,
+        "pieces": 39,
+        "dead": true,
+        "error": null,
+        "p50_ms": 109,
+        "cost_usd": 0,
+        "plans": {
+          "clear lines now": 40
+        }
+      },
+      "openai": {
+        "lines": 16,
+        "sent": 5,
+        "received": 2,
+        "pieces": 40,
+        "dead": false,
+        "error": null,
+        "p50_ms": 164,
+        "cost_usd": 0.002832,
+        "plans": {
+          "stay safe and keep the stack low": 8,
+          "build a bigger attack": 2,
+          "dig out the buried holes": 18,
+          "clear lines now": 12
+        }
+      }
+    },
+    {
+      "seed": 3,
+      "a": "laya",
+      "b": "d1",
+      "turns": 37,
+      "winner": "d1",
+      "laya": {
+        "lines": 4,
+        "sent": 2,
+        "received": 4,
+        "pieces": 37,
+        "dead": true,
+        "error": null,
+        "p50_ms": 107,
+        "cost_usd": 0,
+        "plans": {
+          "clear lines now": 37
+        }
+      },
+      "d1": {
+        "lines": 12,
+        "sent": 5,
+        "received": 2,
+        "pieces": 37,
+        "dead": false,
+        "error": null,
+        "p50_ms": 305,
+        "cost_usd": 0.000561,
+        "plans": {
+          "stay safe and keep the stack low": 1,
+          "build a bigger attack": 1,
+          "dig out the buried holes": 28,
+          "clear lines now": 7
+        }
+      }
+    },
+    {
+      "seed": 3,
+      "a": "jev",
+      "b": "openai",
+      "turns": 86,
+      "winner": "jev",
+      "jev": {
+        "lines": 32,
+        "sent": 9,
+        "received": 2,
+        "pieces": 86,
+        "dead": false,
+        "error": null,
+        "p50_ms": 167,
+        "cost_usd": 0.002516,
+        "plans": {
+          "stay safe and keep the stack low": 1,
+          "build a bigger attack": 1,
+          "dig out the buried holes": 61,
+          "clear lines now": 23
+        }
+      },
+      "openai": {
+        "lines": 26,
+        "sent": 2,
+        "received": 9,
+        "pieces": 85,
+        "dead": true,
+        "error": null,
+        "p50_ms": 162,
+        "cost_usd": 0.006018,
+        "plans": {
+          "stay safe and keep the stack low": 12,
+          "build a bigger attack": 1,
+          "dig out the buried holes": 49,
+          "clear lines now": 24
+        }
+      }
+    },
+    {
+      "seed": 3,
+      "a": "jev",
+      "b": "d1",
+      "turns": 28,
+      "winner": "jev",
+      "jev": {
+        "lines": 8,
+        "sent": 3,
+        "received": 0,
+        "pieces": 28,
+        "dead": false,
+        "error": null,
+        "p50_ms": 171,
+        "cost_usd": 0.000819,
+        "plans": {
+          "stay safe and keep the stack low": 1,
+          "build a bigger attack": 1,
+          "dig out the buried holes": 21,
+          "clear lines now": 5
+        }
+      },
+      "d1": {
+        "lines": 2,
+        "sent": 0,
+        "received": 3,
+        "pieces": 28,
+        "dead": true,
+        "error": null,
+        "p50_ms": 285,
+        "cost_usd": 0.000424,
+        "plans": {
+          "stay safe and keep the stack low": 8,
+          "clear lines now": 2,
+          "build a bigger attack": 1,
+          "dig out the buried holes": 17
+        }
+      }
+    },
+    {
+      "seed": 3,
+      "a": "openai",
+      "b": "d1",
+      "turns": 86,
+      "winner": "d1",
+      "openai": {
+        "lines": 26,
+        "sent": 2,
+        "received": 9,
+        "pieces": 85,
+        "dead": true,
+        "error": null,
+        "p50_ms": 162,
+        "cost_usd": 0.006018,
+        "plans": {
+          "stay safe and keep the stack low": 12,
+          "build a bigger attack": 1,
+          "dig out the buried holes": 49,
+          "clear lines now": 24
+        }
+      },
+      "d1": {
+        "lines": 32,
+        "sent": 9,
+        "received": 2,
+        "pieces": 86,
+        "dead": false,
+        "error": null,
+        "p50_ms": 283,
+        "cost_usd": 0.001306,
+        "plans": {
+          "stay safe and keep the stack low": 1,
+          "build a bigger attack": 1,
+          "dig out the buried holes": 61,
+          "clear lines now": 23
+        }
+      }
+    },
+    {
+      "seed": 7,
+      "a": "laya",
+      "b": "jev",
+      "turns": 35,
+      "winner": "jev",
+      "laya": {
+        "lines": 6,
+        "sent": 1,
+        "received": 1,
+        "pieces": 35,
+        "dead": true,
+        "error": null,
+        "p50_ms": 114,
+        "cost_usd": 0,
+        "plans": {
+          "clear lines now": 35
+        }
+      },
+      "jev": {
+        "lines": 3,
+        "sent": 1,
+        "received": 1,
+        "pieces": 35,
+        "dead": false,
+        "error": null,
+        "p50_ms": 173,
+        "cost_usd": 0.001022,
+        "plans": {
+          "stay safe and keep the stack low": 8,
+          "clear lines now": 2,
+          "build a bigger attack": 1,
+          "dig out the buried holes": 24
+        }
+      }
+    },
+    {
+      "seed": 7,
+      "a": "laya",
+      "b": "openai",
+      "turns": 67,
+      "winner": "openai",
+      "laya": {
+        "lines": 16,
+        "sent": 1,
+        "received": 2,
+        "pieces": 67,
+        "dead": true,
+        "error": null,
+        "p50_ms": 113,
+        "cost_usd": 0,
+        "plans": {
+          "clear lines now": 67
+        }
+      },
+      "openai": {
+        "lines": 23,
+        "sent": 2,
+        "received": 1,
+        "pieces": 67,
+        "dead": false,
+        "error": null,
+        "p50_ms": 161,
+        "cost_usd": 0.004745,
+        "plans": {
+          "build a bigger attack": 2,
+          "stay safe and keep the stack low": 9,
+          "dig out the buried holes": 33,
+          "clear lines now": 23
+        }
+      }
+    },
+    {
+      "seed": 7,
+      "a": "laya",
+      "b": "d1",
+      "turns": 69,
+      "winner": "d1",
+      "laya": {
+        "lines": 16,
+        "sent": 1,
+        "received": 0,
+        "pieces": 69,
+        "dead": true,
+        "error": null,
+        "p50_ms": 104,
+        "cost_usd": 0,
+        "plans": {
+          "clear lines now": 69
+        }
+      },
+      "d1": {
+        "lines": 22,
+        "sent": 0,
+        "received": 1,
+        "pieces": 69,
+        "dead": false,
+        "error": null,
+        "p50_ms": 280,
+        "cost_usd": 0.001048,
+        "plans": {
+          "build a bigger attack": 2,
+          "stay safe and keep the stack low": 7,
+          "clear lines now": 22,
+          "dig out the buried holes": 38
+        }
+      }
+    },
+    {
+      "seed": 7,
+      "a": "jev",
+      "b": "openai",
+      "turns": 99,
+      "winner": "jev",
+      "jev": {
+        "lines": 34,
+        "sent": 6,
+        "received": 2,
+        "pieces": 99,
+        "dead": false,
+        "error": null,
+        "p50_ms": 169,
+        "cost_usd": 0.002897,
+        "plans": {
+          "stay safe and keep the stack low": 13,
+          "clear lines now": 28,
+          "build a bigger attack": 1,
+          "dig out the buried holes": 57
+        }
+      },
+      "openai": {
+        "lines": 28,
+        "sent": 2,
+        "received": 6,
+        "pieces": 98,
+        "dead": true,
+        "error": null,
+        "p50_ms": 161,
+        "cost_usd": 0.006937,
+        "plans": {
+          "build a bigger attack": 2,
+          "stay safe and keep the stack low": 6,
+          "dig out the buried holes": 65,
+          "clear lines now": 26
+        }
+      }
+    },
+    {
+      "seed": 7,
+      "a": "jev",
+      "b": "d1",
+      "turns": 38,
+      "winner": "d1",
+      "jev": {
+        "lines": 3,
+        "sent": 1,
+        "received": 0,
+        "pieces": 38,
+        "dead": true,
+        "error": null,
+        "p50_ms": 178,
+        "cost_usd": 0.001109,
+        "plans": {
+          "stay safe and keep the stack low": 8,
+          "clear lines now": 2,
+          "build a bigger attack": 1,
+          "dig out the buried holes": 27
+        }
+      },
+      "d1": {
+        "lines": 10,
+        "sent": 0,
+        "received": 1,
+        "pieces": 38,
+        "dead": false,
+        "error": null,
+        "p50_ms": 319,
+        "cost_usd": 0.000577,
+        "plans": {
+          "build a bigger attack": 2,
+          "stay safe and keep the stack low": 8,
+          "clear lines now": 10,
+          "dig out the buried holes": 18
+        }
+      }
+    },
+    {
+      "seed": 7,
+      "a": "openai",
+      "b": "d1",
+      "turns": 67,
+      "winner": "d1",
+      "openai": {
+        "lines": 16,
+        "sent": 2,
+        "received": 6,
+        "pieces": 66,
+        "dead": true,
+        "error": null,
+        "p50_ms": 161,
+        "cost_usd": 0.004669,
+        "plans": {
+          "build a bigger attack": 3,
+          "stay safe and keep the stack low": 11,
+          "clear lines now": 14,
+          "dig out the buried holes": 39
+        }
+      },
+      "d1": {
+        "lines": 23,
+        "sent": 6,
+        "received": 2,
+        "pieces": 67,
+        "dead": false,
+        "error": null,
+        "p50_ms": 319,
+        "cost_usd": 0.001017,
+        "plans": {
+          "build a bigger attack": 3,
+          "stay safe and keep the stack low": 20,
+          "clear lines now": 18,
+          "dig out the buried holes": 26
+        }
+      }
+    },
+    {
+      "seed": 11,
+      "a": "laya",
+      "b": "jev",
+      "turns": 59,
+      "winner": "laya",
+      "laya": {
+        "lines": 14,
+        "sent": 2,
+        "received": 2,
+        "pieces": 59,
+        "dead": false,
+        "error": null,
+        "p50_ms": 110,
+        "cost_usd": 0,
+        "plans": {
+          "clear lines now": 59
+        }
+      },
+      "jev": {
+        "lines": 12,
+        "sent": 2,
+        "received": 2,
+        "pieces": 59,
+        "dead": true,
+        "error": null,
+        "p50_ms": 180,
+        "cost_usd": 0.001725,
+        "plans": {
+          "stay safe and keep the stack low": 6,
+          "dig out the buried holes": 43,
+          "clear lines now": 10
+        }
+      }
+    },
+    {
+      "seed": 11,
+      "a": "laya",
+      "b": "openai",
+      "turns": 108,
+      "winner": "openai",
+      "laya": {
+        "lines": 32,
+        "sent": 8,
+        "received": 5,
+        "pieces": 108,
+        "dead": true,
+        "error": null,
+        "p50_ms": 112,
+        "cost_usd": 0,
+        "plans": {
+          "clear lines now": 108
+        }
+      },
+      "openai": {
+        "lines": 37,
+        "sent": 5,
+        "received": 8,
+        "pieces": 108,
+        "dead": false,
+        "error": null,
+        "p50_ms": 159,
+        "cost_usd": 0.007647,
+        "plans": {
+          "stay safe and keep the stack low": 20,
+          "build a bigger attack": 1,
+          "dig out the buried holes": 50,
+          "clear lines now": 37
+        }
+      }
+    },
+    {
+      "seed": 11,
+      "a": "laya",
+      "b": "d1",
+      "turns": 74,
+      "winner": "d1",
+      "laya": {
+        "lines": 20,
+        "sent": 2,
+        "received": 8,
+        "pieces": 73,
+        "dead": true,
+        "error": null,
+        "p50_ms": 109,
+        "cost_usd": 0,
+        "plans": {
+          "clear lines now": 74
+        }
+      },
+      "d1": {
+        "lines": 26,
+        "sent": 8,
+        "received": 2,
+        "pieces": 74,
+        "dead": false,
+        "error": null,
+        "p50_ms": 312,
+        "cost_usd": 0.001125,
+        "plans": {
+          "stay safe and keep the stack low": 6,
+          "build a bigger attack": 1,
+          "dig out the buried holes": 48,
+          "clear lines now": 19
+        }
+      }
+    },
+    {
+      "seed": 11,
+      "a": "jev",
+      "b": "openai",
+      "turns": 40,
+      "winner": "jev",
+      "jev": {
+        "lines": 6,
+        "sent": 1,
+        "received": 1,
+        "pieces": 40,
+        "dead": false,
+        "error": null,
+        "p50_ms": 170,
+        "cost_usd": 0.001169,
+        "plans": {
+          "stay safe and keep the stack low": 4,
+          "dig out the buried holes": 30,
+          "clear lines now": 5,
+          "build a bigger attack": 1
+        }
+      },
+      "openai": {
+        "lines": 7,
+        "sent": 1,
+        "received": 1,
+        "pieces": 40,
+        "dead": true,
+        "error": null,
+        "p50_ms": 164,
+        "cost_usd": 0.002828,
+        "plans": {
+          "stay safe and keep the stack low": 8,
+          "build a bigger attack": 2,
+          "dig out the buried holes": 24,
+          "clear lines now": 6
+        }
+      }
+    },
+    {
+      "seed": 11,
+      "a": "jev",
+      "b": "d1",
+      "turns": 55,
+      "winner": "d1",
+      "jev": {
+        "lines": 12,
+        "sent": 2,
+        "received": 3,
+        "pieces": 55,
+        "dead": true,
+        "error": null,
+        "p50_ms": 163,
+        "cost_usd": 0.001607,
+        "plans": {
+          "stay safe and keep the stack low": 7,
+          "dig out the buried holes": 38,
+          "clear lines now": 10
+        }
+      },
+      "d1": {
+        "lines": 16,
+        "sent": 3,
+        "received": 2,
+        "pieces": 55,
+        "dead": false,
+        "error": null,
+        "p50_ms": 313,
+        "cost_usd": 0.000834,
+        "plans": {
+          "stay safe and keep the stack low": 6,
+          "build a bigger attack": 1,
+          "dig out the buried holes": 35,
+          "clear lines now": 13
+        }
+      }
+    },
+    {
+      "seed": 11,
+      "a": "openai",
+      "b": "d1",
+      "turns": 98,
+      "winner": "openai",
+      "openai": {
+        "lines": 35,
+        "sent": 6,
+        "received": 8,
+        "pieces": 98,
+        "dead": false,
+        "error": null,
+        "p50_ms": 158,
+        "cost_usd": 0.006939,
+        "plans": {
+          "stay safe and keep the stack low": 22,
+          "build a bigger attack": 1,
+          "dig out the buried holes": 45,
+          "clear lines now": 30
+        }
+      },
+      "d1": {
+        "lines": 30,
+        "sent": 8,
+        "received": 6,
+        "pieces": 98,
+        "dead": true,
+        "error": null,
+        "p50_ms": 304,
+        "cost_usd": 0.001491,
+        "plans": {
+          "stay safe and keep the stack low": 6,
+          "build a bigger attack": 1,
+          "dig out the buried holes": 68,
+          "clear lines now": 23
+        }
+      }
+    },
+    {
+      "seed": 19,
+      "a": "laya",
+      "b": "jev",
+      "turns": 97,
+      "winner": "laya",
+      "laya": {
+        "lines": 38,
+        "sent": 16,
+        "received": 6,
+        "pieces": 97,
+        "dead": false,
+        "error": null,
+        "p50_ms": 106,
+        "cost_usd": 0,
+        "plans": {
+          "clear lines now": 97
+        }
+      },
+      "jev": {
+        "lines": 35,
+        "sent": 6,
+        "received": 16,
+        "pieces": 96,
+        "dead": true,
+        "error": null,
+        "p50_ms": 176,
+        "cost_usd": 0.002813,
+        "plans": {
+          "build a bigger attack": 2,
+          "dig out the buried holes": 65,
+          "clear lines now": 30
+        }
+      }
+    },
+    {
+      "seed": 19,
+      "a": "laya",
+      "b": "openai",
+      "turns": 51,
+      "winner": "laya",
+      "laya": {
+        "lines": 19,
+        "sent": 7,
+        "received": 3,
+        "pieces": 51,
+        "dead": false,
+        "error": null,
+        "p50_ms": 96,
+        "cost_usd": 0,
+        "plans": {
+          "clear lines now": 51
+        }
+      },
+      "openai": {
+        "lines": 11,
+        "sent": 3,
+        "received": 7,
+        "pieces": 51,
+        "dead": true,
+        "error": null,
+        "p50_ms": 153,
+        "cost_usd": 0.003606,
+        "plans": {
+          "build a bigger attack": 2,
+          "stay safe and keep the stack low": 2,
+          "dig out the buried holes": 39,
+          "clear lines now": 8
+        }
+      }
+    },
+    {
+      "seed": 19,
+      "a": "laya",
+      "b": "d1",
+      "turns": 31,
+      "winner": "laya",
+      "laya": {
+        "lines": 10,
+        "sent": 1,
+        "received": 1,
+        "pieces": 31,
+        "dead": false,
+        "error": null,
+        "p50_ms": 114,
+        "cost_usd": 0,
+        "plans": {
+          "clear lines now": 31
+        }
+      },
+      "d1": {
+        "lines": 6,
+        "sent": 1,
+        "received": 1,
+        "pieces": 31,
+        "dead": true,
+        "error": null,
+        "p50_ms": 309,
+        "cost_usd": 0.000469,
+        "plans": {
+          "build a bigger attack": 2,
+          "stay safe and keep the stack low": 11,
+          "clear lines now": 5,
+          "dig out the buried holes": 13
+        }
+      }
+    },
+    {
+      "seed": 19,
+      "a": "jev",
+      "b": "openai",
+      "turns": 65,
+      "winner": "jev",
+      "jev": {
+        "lines": 17,
+        "sent": 6,
+        "received": 2,
+        "pieces": 65,
+        "dead": false,
+        "error": null,
+        "p50_ms": 169,
+        "cost_usd": 0.001902,
+        "plans": {
+          "build a bigger attack": 2,
+          "stay safe and keep the stack low": 1,
+          "dig out the buried holes": 51,
+          "clear lines now": 11
+        }
+      },
+      "openai": {
+        "lines": 17,
+        "sent": 2,
+        "received": 6,
+        "pieces": 65,
+        "dead": true,
+        "error": null,
+        "p50_ms": 156,
+        "cost_usd": 0.004599,
+        "plans": {
+          "build a bigger attack": 2,
+          "stay safe and keep the stack low": 17,
+          "clear lines now": 15,
+          "dig out the buried holes": 31
+        }
+      }
+    },
+    {
+      "seed": 19,
+      "a": "jev",
+      "b": "d1",
+      "turns": 50,
+      "winner": "d1",
+      "jev": {
+        "lines": 8,
+        "sent": 2,
+        "received": 3,
+        "pieces": 50,
+        "dead": true,
+        "error": null,
+        "p50_ms": 167,
+        "cost_usd": 0.001461,
+        "plans": {
+          "stay safe and keep the stack low": 5,
+          "clear lines now": 6,
+          "build a bigger attack": 1,
+          "dig out the buried holes": 38
+        }
+      },
+      "d1": {
+        "lines": 13,
+        "sent": 3,
+        "received": 2,
+        "pieces": 50,
+        "dead": false,
+        "error": null,
+        "p50_ms": 299,
+        "cost_usd": 0.000759,
+        "plans": {
+          "build a bigger attack": 2,
+          "stay safe and keep the stack low": 17,
+          "clear lines now": 10,
+          "dig out the buried holes": 21
+        }
+      }
+    },
+    {
+      "seed": 19,
+      "a": "openai",
+      "b": "d1",
+      "turns": 32,
+      "winner": "d1",
+      "openai": {
+        "lines": 2,
+        "sent": 0,
+        "received": 2,
+        "pieces": 32,
+        "dead": true,
+        "error": null,
+        "p50_ms": 171,
+        "cost_usd": 0.002261,
+        "plans": {
+          "build a bigger attack": 2,
+          "stay safe and keep the stack low": 11,
+          "clear lines now": 2,
+          "dig out the buried holes": 17
+        }
+      },
+      "d1": {
+        "lines": 10,
+        "sent": 2,
+        "received": 0,
+        "pieces": 32,
+        "dead": false,
+        "error": null,
+        "p50_ms": 315,
+        "cost_usd": 0.000486,
+        "plans": {
+          "build a bigger attack": 2,
+          "stay safe and keep the stack low": 16,
+          "clear lines now": 8,
+          "dig out the buried holes": 6
+        }
+      }
+    },
+    {
+      "seed": 23,
+      "a": "laya",
+      "b": "jev",
+      "turns": 29,
+      "winner": "laya",
+      "laya": {
+        "lines": 6,
+        "sent": 2,
+        "received": 0,
+        "pieces": 29,
+        "dead": false,
+        "error": null,
+        "p50_ms": 93,
+        "cost_usd": 0,
+        "plans": {
+          "clear lines now": 29
+        }
+      },
+      "jev": {
+        "lines": 2,
+        "sent": 0,
+        "received": 2,
+        "pieces": 29,
+        "dead": true,
+        "error": null,
+        "p50_ms": 181,
+        "cost_usd": 0.000847,
+        "plans": {
+          "build a bigger attack": 2,
+          "dig out the buried holes": 25,
+          "clear lines now": 2
+        }
+      }
+    },
+    {
+      "seed": 23,
+      "a": "laya",
+      "b": "openai",
+      "turns": 27,
+      "winner": "laya",
+      "laya": {
+        "lines": 6,
+        "sent": 2,
+        "received": 0,
+        "pieces": 27,
+        "dead": false,
+        "error": null,
+        "p50_ms": 109,
+        "cost_usd": 0,
+        "plans": {
+          "clear lines now": 27
+        }
+      },
+      "openai": {
+        "lines": 3,
+        "sent": 0,
+        "received": 2,
+        "pieces": 27,
+        "dead": true,
+        "error": null,
+        "p50_ms": 184,
+        "cost_usd": 0.001908,
+        "plans": {
+          "build a bigger attack": 2,
+          "stay safe and keep the stack low": 5,
+          "clear lines now": 3,
+          "dig out the buried holes": 17
+        }
+      }
+    },
+    {
+      "seed": 23,
+      "a": "laya",
+      "b": "d1",
+      "turns": 43,
+      "winner": "d1",
+      "laya": {
+        "lines": 6,
+        "sent": 2,
+        "received": 2,
+        "pieces": 42,
+        "dead": true,
+        "error": null,
+        "p50_ms": 95,
+        "cost_usd": 0,
+        "plans": {
+          "clear lines now": 43
+        }
+      },
+      "d1": {
+        "lines": 11,
+        "sent": 2,
+        "received": 2,
+        "pieces": 43,
+        "dead": false,
+        "error": null,
+        "p50_ms": 293,
+        "cost_usd": 0.000652,
+        "plans": {
+          "build a bigger attack": 1,
+          "stay safe and keep the stack low": 7,
+          "clear lines now": 9,
+          "dig out the buried holes": 26
+        }
+      }
+    },
+    {
+      "seed": 23,
+      "a": "jev",
+      "b": "openai",
+      "turns": 99,
+      "winner": "openai",
+      "jev": {
+        "lines": 29,
+        "sent": 8,
+        "received": 3,
+        "pieces": 99,
+        "dead": true,
+        "error": null,
+        "p50_ms": 166,
+        "cost_usd": 0.002898,
+        "plans": {
+          "stay safe and keep the stack low": 7,
+          "build a bigger attack": 1,
+          "dig out the buried holes": 70,
+          "clear lines now": 21
+        }
+      },
+      "openai": {
+        "lines": 34,
+        "sent": 3,
+        "received": 8,
+        "pieces": 99,
+        "dead": false,
+        "error": null,
+        "p50_ms": 157,
+        "cost_usd": 0.007011,
+        "plans": {
+          "build a bigger attack": 3,
+          "stay safe and keep the stack low": 8,
+          "clear lines now": 34,
+          "dig out the buried holes": 54
+        }
+      }
+    },
+    {
+      "seed": 23,
+      "a": "jev",
+      "b": "d1",
+      "turns": 49,
+      "winner": "d1",
+      "jev": {
+        "lines": 10,
+        "sent": 3,
+        "received": 2,
+        "pieces": 49,
+        "dead": true,
+        "error": null,
+        "p50_ms": 174,
+        "cost_usd": 0.001432,
+        "plans": {
+          "stay safe and keep the stack low": 8,
+          "build a bigger attack": 1,
+          "dig out the buried holes": 33,
+          "clear lines now": 7
+        }
+      },
+      "d1": {
+        "lines": 13,
+        "sent": 2,
+        "received": 3,
+        "pieces": 49,
+        "dead": false,
+        "error": null,
+        "p50_ms": 296,
+        "cost_usd": 0.000744,
+        "plans": {
+          "build a bigger attack": 1,
+          "stay safe and keep the stack low": 7,
+          "clear lines now": 11,
+          "dig out the buried holes": 30
+        }
+      }
+    },
+    {
+      "seed": 23,
+      "a": "openai",
+      "b": "d1",
+      "turns": 92,
+      "winner": "d1",
+      "openai": {
+        "lines": 28,
+        "sent": 0,
+        "received": 6,
+        "pieces": 92,
+        "dead": true,
+        "error": null,
+        "p50_ms": 153,
+        "cost_usd": 0.006515,
+        "plans": {
+          "build a bigger attack": 4,
+          "stay safe and keep the stack low": 21,
+          "clear lines now": 28,
+          "dig out the buried holes": 39
+        }
+      },
+      "d1": {
+        "lines": 26,
+        "sent": 6,
+        "received": 0,
+        "pieces": 92,
+        "dead": false,
+        "error": null,
+        "p50_ms": 300,
+        "cost_usd": 0.001397,
+        "plans": {
+          "build a bigger attack": 5,
+          "stay safe and keep the stack low": 36,
+          "clear lines now": 21,
+          "dig out the buried holes": 30
+        }
+      }
+    },
+    {
+      "seed": 42,
+      "a": "laya",
+      "b": "jev",
+      "turns": 46,
+      "winner": "jev",
+      "laya": {
+        "lines": 8,
+        "sent": 0,
+        "received": 3,
+        "pieces": 46,
+        "dead": true,
+        "error": null,
+        "p50_ms": 106,
+        "cost_usd": 0,
+        "plans": {
+          "clear lines now": 46
+        }
+      },
+      "jev": {
+        "lines": 14,
+        "sent": 3,
+        "received": 0,
+        "pieces": 46,
+        "dead": false,
+        "error": null,
+        "p50_ms": 167,
+        "cost_usd": 0.001345,
+        "plans": {
+          "stay safe and keep the stack low": 1,
+          "dig out the buried holes": 33,
+          "clear lines now": 11,
+          "build a bigger attack": 1
+        }
+      }
+    },
+    {
+      "seed": 42,
+      "a": "laya",
+      "b": "openai",
+      "turns": 44,
+      "winner": "openai",
+      "laya": {
+        "lines": 8,
+        "sent": 0,
+        "received": 4,
+        "pieces": 43,
+        "dead": true,
+        "error": null,
+        "p50_ms": 98,
+        "cost_usd": 0,
+        "plans": {
+          "clear lines now": 44
+        }
+      },
+      "openai": {
+        "lines": 12,
+        "sent": 4,
+        "received": 0,
+        "pieces": 44,
+        "dead": false,
+        "error": null,
+        "p50_ms": 154,
+        "cost_usd": 0.003112,
+        "plans": {
+          "stay safe and keep the stack low": 7,
+          "build a bigger attack": 2,
+          "dig out the buried holes": 24,
+          "clear lines now": 11
+        }
+      }
+    },
+    {
+      "seed": 42,
+      "a": "laya",
+      "b": "d1",
+      "turns": 46,
+      "winner": "d1",
+      "laya": {
+        "lines": 8,
+        "sent": 0,
+        "received": 2,
+        "pieces": 46,
+        "dead": true,
+        "error": null,
+        "p50_ms": 105,
+        "cost_usd": 0,
+        "plans": {
+          "clear lines now": 46
+        }
+      },
+      "d1": {
+        "lines": 15,
+        "sent": 2,
+        "received": 0,
+        "pieces": 46,
+        "dead": false,
+        "error": null,
+        "p50_ms": 308,
+        "cost_usd": 0.000698,
+        "plans": {
+          "stay safe and keep the stack low": 7,
+          "build a bigger attack": 1,
+          "dig out the buried holes": 25,
+          "clear lines now": 13
+        }
+      }
+    },
+    {
+      "seed": 42,
+      "a": "jev",
+      "b": "openai",
+      "turns": 95,
+      "winner": "jev",
+      "jev": {
+        "lines": 35,
+        "sent": 6,
+        "received": 11,
+        "pieces": 95,
+        "dead": false,
+        "error": null,
+        "p50_ms": 165,
+        "cost_usd": 0.002783,
+        "plans": {
+          "stay safe and keep the stack low": 9,
+          "dig out the buried holes": 55,
+          "clear lines now": 29,
+          "build a bigger attack": 2
+        }
+      },
+      "openai": {
+        "lines": 30,
+        "sent": 11,
+        "received": 5,
+        "pieces": 95,
+        "dead": true,
+        "error": null,
+        "p50_ms": 154,
+        "cost_usd": 0.006721,
+        "plans": {
+          "stay safe and keep the stack low": 19,
+          "build a bigger attack": 2,
+          "dig out the buried holes": 49,
+          "clear lines now": 25
+        }
+      }
+    },
+    {
+      "seed": 42,
+      "a": "jev",
+      "b": "d1",
+      "turns": 66,
+      "winner": "jev",
+      "jev": {
+        "lines": 24,
+        "sent": 3,
+        "received": 2,
+        "pieces": 66,
+        "dead": false,
+        "error": null,
+        "p50_ms": 165,
+        "cost_usd": 0.001931,
+        "plans": {
+          "stay safe and keep the stack low": 9,
+          "dig out the buried holes": 34,
+          "clear lines now": 21,
+          "build a bigger attack": 2
+        }
+      },
+      "d1": {
+        "lines": 15,
+        "sent": 2,
+        "received": 3,
+        "pieces": 66,
+        "dead": true,
+        "error": null,
+        "p50_ms": 299,
+        "cost_usd": 0.001,
+        "plans": {
+          "stay safe and keep the stack low": 4,
+          "build a bigger attack": 1,
+          "dig out the buried holes": 48,
+          "clear lines now": 13
+        }
+      }
+    },
+    {
+      "seed": 42,
+      "a": "openai",
+      "b": "d1",
+      "turns": 61,
+      "winner": "d1",
+      "openai": {
+        "lines": 12,
+        "sent": 2,
+        "received": 2,
+        "pieces": 61,
+        "dead": true,
+        "error": null,
+        "p50_ms": 158,
+        "cost_usd": 0.004314,
+        "plans": {
+          "stay safe and keep the stack low": 14,
+          "build a bigger attack": 2,
+          "dig out the buried holes": 35,
+          "clear lines now": 10
+        }
+      },
+      "d1": {
+        "lines": 15,
+        "sent": 2,
+        "received": 2,
+        "pieces": 61,
+        "dead": false,
+        "error": null,
+        "p50_ms": 296,
+        "cost_usd": 0.000926,
+        "plans": {
+          "stay safe and keep the stack low": 4,
+          "dig out the buried holes": 43,
+          "build a bigger attack": 1,
+          "clear lines now": 13
+        }
+      }
+    },
+    {
+      "seed": 57,
+      "a": "laya",
+      "b": "jev",
+      "turns": 66,
+      "winner": "laya",
+      "laya": {
+        "lines": 24,
+        "sent": 2,
+        "received": 2,
+        "pieces": 66,
+        "dead": false,
+        "error": null,
+        "p50_ms": 90,
+        "cost_usd": 0,
+        "plans": {
+          "clear lines now": 66
+        }
+      },
+      "jev": {
+        "lines": 15,
+        "sent": 2,
+        "received": 2,
+        "pieces": 66,
+        "dead": true,
+        "error": null,
+        "p50_ms": 160,
+        "cost_usd": 0.001928,
+        "plans": {
+          "stay safe and keep the stack low": 2,
+          "build a bigger attack": 1,
+          "dig out the buried holes": 50,
+          "clear lines now": 13
+        }
+      }
+    },
+    {
+      "seed": 57,
+      "a": "laya",
+      "b": "openai",
+      "turns": 79,
+      "winner": "openai",
+      "laya": {
+        "lines": 25,
+        "sent": 2,
+        "received": 8,
+        "pieces": 79,
+        "dead": true,
+        "error": null,
+        "p50_ms": 90,
+        "cost_usd": 0,
+        "plans": {
+          "clear lines now": 79
+        }
+      },
+      "openai": {
+        "lines": 24,
+        "sent": 8,
+        "received": 2,
+        "pieces": 79,
+        "dead": false,
+        "error": null,
+        "p50_ms": 156,
+        "cost_usd": 0.005589,
+        "plans": {
+          "stay safe and keep the stack low": 13,
+          "build a bigger attack": 1,
+          "dig out the buried holes": 48,
+          "clear lines now": 17
+        }
+      }
+    },
+    {
+      "seed": 57,
+      "a": "laya",
+      "b": "d1",
+      "turns": 66,
+      "winner": "laya",
+      "laya": {
+        "lines": 24,
+        "sent": 2,
+        "received": 2,
+        "pieces": 66,
+        "dead": false,
+        "error": null,
+        "p50_ms": 91,
+        "cost_usd": 0,
+        "plans": {
+          "clear lines now": 66
+        }
+      },
+      "d1": {
+        "lines": 15,
+        "sent": 2,
+        "received": 2,
+        "pieces": 66,
+        "dead": true,
+        "error": null,
+        "p50_ms": 290,
+        "cost_usd": 0.001,
+        "plans": {
+          "stay safe and keep the stack low": 2,
+          "build a bigger attack": 1,
+          "dig out the buried holes": 50,
+          "clear lines now": 13
+        }
+      }
+    },
+    {
+      "seed": 57,
+      "a": "jev",
+      "b": "openai",
+      "turns": 66,
+      "winner": "openai",
+      "jev": {
+        "lines": 15,
+        "sent": 2,
+        "received": 3,
+        "pieces": 66,
+        "dead": true,
+        "error": null,
+        "p50_ms": 167,
+        "cost_usd": 0.001933,
+        "plans": {
+          "stay safe and keep the stack low": 2,
+          "build a bigger attack": 1,
+          "dig out the buried holes": 50,
+          "clear lines now": 13
+        }
+      },
+      "openai": {
+        "lines": 16,
+        "sent": 3,
+        "received": 2,
+        "pieces": 66,
+        "dead": false,
+        "error": null,
+        "p50_ms": 156,
+        "cost_usd": 0.004669,
+        "plans": {
+          "stay safe and keep the stack low": 8,
+          "build a bigger attack": 2,
+          "dig out the buried holes": 43,
+          "clear lines now": 13
+        }
+      }
+    },
+    {
+      "seed": 57,
+      "a": "jev",
+      "b": "d1",
+      "turns": 66,
+      "winner": "draw",
+      "jev": {
+        "lines": 15,
+        "sent": 2,
+        "received": 2,
+        "pieces": 66,
+        "dead": true,
+        "error": null,
+        "p50_ms": 161,
+        "cost_usd": 0.001931,
+        "plans": {
+          "stay safe and keep the stack low": 2,
+          "build a bigger attack": 1,
+          "dig out the buried holes": 50,
+          "clear lines now": 13
+        }
+      },
+      "d1": {
+        "lines": 15,
+        "sent": 2,
+        "received": 2,
+        "pieces": 66,
+        "dead": true,
+        "error": null,
+        "p50_ms": 299,
+        "cost_usd": 0.001002,
+        "plans": {
+          "stay safe and keep the stack low": 2,
+          "build a bigger attack": 1,
+          "dig out the buried holes": 50,
+          "clear lines now": 13
+        }
+      }
+    },
+    {
+      "seed": 57,
+      "a": "openai",
+      "b": "d1",
+      "turns": 66,
+      "winner": "openai",
+      "openai": {
+        "lines": 16,
+        "sent": 3,
+        "received": 2,
+        "pieces": 66,
+        "dead": false,
+        "error": null,
+        "p50_ms": 160,
+        "cost_usd": 0.004669,
+        "plans": {
+          "stay safe and keep the stack low": 8,
+          "build a bigger attack": 2,
+          "dig out the buried holes": 43,
+          "clear lines now": 13
+        }
+      },
+      "d1": {
+        "lines": 15,
+        "sent": 2,
+        "received": 3,
+        "pieces": 66,
+        "dead": true,
+        "error": null,
+        "p50_ms": 282,
+        "cost_usd": 0.001004,
+        "plans": {
+          "stay safe and keep the stack low": 2,
+          "build a bigger attack": 1,
+          "dig out the buried holes": 50,
+          "clear lines now": 13
+        }
+      }
+    },
+    {
+      "seed": 88,
+      "a": "laya",
+      "b": "jev",
+      "turns": 36,
+      "winner": "jev",
+      "laya": {
+        "lines": 6,
+        "sent": 1,
+        "received": 2,
+        "pieces": 36,
+        "dead": true,
+        "error": null,
+        "p50_ms": 107,
+        "cost_usd": 0,
+        "plans": {
+          "clear lines now": 36
+        }
+      },
+      "jev": {
+        "lines": 13,
+        "sent": 2,
+        "received": 1,
+        "pieces": 36,
+        "dead": false,
+        "error": null,
+        "p50_ms": 165,
+        "cost_usd": 0.001053,
+        "plans": {
+          "stay safe and keep the stack low": 4,
+          "clear lines now": 11,
+          "build a bigger attack": 1,
+          "dig out the buried holes": 20
+        }
+      }
+    },
+    {
+      "seed": 88,
+      "a": "laya",
+      "b": "openai",
+      "turns": 36,
+      "winner": "openai",
+      "laya": {
+        "lines": 6,
+        "sent": 1,
+        "received": 2,
+        "pieces": 36,
+        "dead": true,
+        "error": null,
+        "p50_ms": 105,
+        "cost_usd": 0,
+        "plans": {
+          "clear lines now": 36
+        }
+      },
+      "openai": {
+        "lines": 13,
+        "sent": 2,
+        "received": 1,
+        "pieces": 36,
+        "dead": false,
+        "error": null,
+        "p50_ms": 158,
+        "cost_usd": 0.002549,
+        "plans": {
+          "stay safe and keep the stack low": 9,
+          "clear lines now": 12,
+          "build a bigger attack": 1,
+          "dig out the buried holes": 14
+        }
+      }
+    },
+    {
+      "seed": 88,
+      "a": "laya",
+      "b": "d1",
+      "turns": 36,
+      "winner": "d1",
+      "laya": {
+        "lines": 6,
+        "sent": 1,
+        "received": 2,
+        "pieces": 36,
+        "dead": true,
+        "error": null,
+        "p50_ms": 110,
+        "cost_usd": 0,
+        "plans": {
+          "clear lines now": 36
+        }
+      },
+      "d1": {
+        "lines": 13,
+        "sent": 2,
+        "received": 1,
+        "pieces": 36,
+        "dead": false,
+        "error": null,
+        "p50_ms": 300,
+        "cost_usd": 0.000547,
+        "plans": {
+          "stay safe and keep the stack low": 6,
+          "clear lines now": 11,
+          "build a bigger attack": 1,
+          "dig out the buried holes": 18
+        }
+      }
+    },
+    {
+      "seed": 88,
+      "a": "jev",
+      "b": "openai",
+      "turns": 81,
+      "winner": "jev",
+      "jev": {
+        "lines": 25,
+        "sent": 6,
+        "received": 2,
+        "pieces": 81,
+        "dead": false,
+        "error": null,
+        "p50_ms": 168,
+        "cost_usd": 0.002372,
+        "plans": {
+          "stay safe and keep the stack low": 8,
+          "clear lines now": 19,
+          "build a bigger attack": 1,
+          "dig out the buried holes": 53
+        }
+      },
+      "openai": {
+        "lines": 24,
+        "sent": 2,
+        "received": 6,
+        "pieces": 81,
+        "dead": true,
+        "error": null,
+        "p50_ms": 161,
+        "cost_usd": 0.005734,
+        "plans": {
+          "stay safe and keep the stack low": 6,
+          "clear lines now": 22,
+          "build a bigger attack": 2,
+          "dig out the buried holes": 51
+        }
+      }
+    },
+    {
+      "seed": 88,
+      "a": "jev",
+      "b": "d1",
+      "turns": 76,
+      "winner": "draw",
+      "jev": {
+        "lines": 23,
+        "sent": 5,
+        "received": 5,
+        "pieces": 76,
+        "dead": true,
+        "error": null,
+        "p50_ms": 174,
+        "cost_usd": 0.002222,
+        "plans": {
+          "stay safe and keep the stack low": 4,
+          "clear lines now": 18,
+          "build a bigger attack": 1,
+          "dig out the buried holes": 53
+        }
+      },
+      "d1": {
+        "lines": 23,
+        "sent": 5,
+        "received": 5,
+        "pieces": 76,
+        "dead": true,
+        "error": null,
+        "p50_ms": 301,
+        "cost_usd": 0.001153,
+        "plans": {
+          "stay safe and keep the stack low": 9,
+          "clear lines now": 18,
+          "build a bigger attack": 1,
+          "dig out the buried holes": 48
+        }
+      }
+    },
+    {
+      "seed": 88,
+      "a": "openai",
+      "b": "d1",
+      "turns": 80,
+      "winner": "openai",
+      "openai": {
+        "lines": 24,
+        "sent": 2,
+        "received": 4,
+        "pieces": 80,
+        "dead": false,
+        "error": null,
+        "p50_ms": 167,
+        "cost_usd": 0.005663,
+        "plans": {
+          "stay safe and keep the stack low": 6,
+          "clear lines now": 22,
+          "build a bigger attack": 2,
+          "dig out the buried holes": 50
+        }
+      },
+      "d1": {
+        "lines": 20,
+        "sent": 4,
+        "received": 2,
+        "pieces": 80,
+        "dead": true,
+        "error": null,
+        "p50_ms": 305,
+        "cost_usd": 0.001216,
+        "plans": {
+          "stay safe and keep the stack low": 12,
+          "clear lines now": 16,
+          "build a bigger attack": 1,
+          "dig out the buried holes": 51
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,135 @@
+{
+  "at": "2026-10-12T16:34:34.558Z",
+  "url": "http://localhost:8750/vision/?case=bombshot",
+  "result": {
+    "openai": [
+      {
+        "src": "img/bomb-safe.png",
+        "answers": {
+          "green": {
+            "type": "noul",
+            "noul": 0.03
+          },
+          "who": {
+            "type": "choice",
+            "choice": "초록",
+            "confidence": 0.08,
+            "probabilities": {
+              "초록": 0.26,
+              "분홍": 0.19,
+              "청록": 0.12,
+              "노랑": 0.24,
+              "없음": 0.19
+            }
+          }
+        },
+        "latency_ms": 755,
+        "usage": {
+          "input_tokens": 1209,
+          "input_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0
+          },
+          "output_tokens": 0,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 1209
+        },
+        "cost_usd": 0.00012090000000000001
+      },
+      {
+        "src": "img/bomb-danger.png",
+        "answers": {
+          "green": {
+            "type": "noul",
+            "noul": 0.5
+          },
+          "who": {
+            "type": "choice",
+            "choice": "분홍",
+            "confidence": 0.19,
+            "probabilities": {
+              "초록": 0.34,
+              "분홍": 0.35,
+              "청록": 0.03,
+              "노랑": 0.24,
+              "없음": 0.04
+            }
+          }
+        },
+        "latency_ms": 381.7,
+        "usage": {
+          "input_tokens": 1209,
+          "input_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0
+          },
+          "output_tokens": 0,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 1209
+        },
+        "cost_usd": 0.00012090000000000001
+      }
+    ],
+    "d1": null,
+    "d1s": [
+      {
+        "src": "img/bomb-safe.png",
+        "answers": {
+          "green": {
+            "type": "noul",
+            "noul": 0.29421650091686036
+          },
+          "who": {
+            "type": "choice",
+            "choice": "노랑",
+            "probabilities": {
+              "노랑": 0.29065541053633825,
+              "분홍": 0.17629141790165156,
+              "없음": 0.1069261627481554,
+              "청록": 0.22636266132964092,
+              "초록": 0.19976434748421387
+            },
+            "confidence": 0.11331926317042285
+          }
+        },
+        "latency_ms": 583.6,
+        "usage": {
+          "input_tokens": 10712,
+          "output_tokens": 2,
+          "cost": 0.000449904
+        }
+      },
+      {
+        "src": "img/bomb-danger.png",
+        "answers": {
+          "green": {
+            "type": "noul",
+            "noul": 0.2689427624919827
+          },
+          "who": {
+            "type": "choice",
+            "choice": "노랑",
+            "probabilities": {
+              "노랑": 0.2655205742797744,
+              "분홍": 0.1824894440009109,
+              "없음": 0.12542303835435156,
+              "청록": 0.2655205742797744,
+              "초록": 0.16104636908518885
+            },
+            "confidence": 0.08190071784971797
+          }
+        },
+        "latency_ms": 531.5,
+        "usage": {
+          "input_tokens": 10937,
+          "output_tokens": 2,
+          "cost": 0.000459354
+        }
+      }
+    ]
+  }
+}

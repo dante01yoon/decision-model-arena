@@ -1,0 +1,16 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Decision Arena — 폭탄 대전</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/static/pretendard.css">
+<link rel="stylesheet" href="./bomb.css">
+<body>
+<header class="top">
+  <div class="title">폭탄 대전 <small>넷이 한 판에서 · 마지막까지 살아남으면 승리</small></div>
+  <div class="turn">턴 <b id="turn">0</b><span id="shrink"></span></div>
+</header>
+<main>
+  <div class="board" id="board"><div class="layer" id="tiles"></div><div class="layer" id="fx"></div><div class="layer" id="units"></div></div>
+  <aside id="cards"></aside>
+</main>
+<footer class="safe"></footer>
+<script type="module" src="./main.js"></script>
